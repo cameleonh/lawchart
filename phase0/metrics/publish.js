@@ -14,6 +14,10 @@ const lawHold = read('p2_holdout_lawchart.json');  // 홀드아웃 40건(2차)
 const orig = read('p2_holdout_original.json');    // 원본 기준선(홀드아웃 40건)
 const hasAI = fs.existsSync(path.join(REP, 'p2_all_ai.json'));
 const aiAll = hasAI ? read('p2_all_ai.json') : null; // AI 경로(옵트인·BYOK)
+const hasReal = fs.existsSync(path.join(REP, 'p2_real_lawchart.json'));
+const realLaw = hasReal ? read('p2_real_lawchart.json') : null; // 실 판례 홀드아웃
+const hasRealAI = fs.existsSync(path.join(REP, 'p2_real_ai.json'));
+const realAI = hasRealAI ? read('p2_real_ai.json') : null; // 실 판례 AI
 const pct = x => (x * 100).toFixed(1) + '%';
 
 const domains = { civil: '민법', commercial: '상법', criminal: '형사', procedural: '민사소송법' };
@@ -86,6 +90,22 @@ td b{color:var(--indigo)}
     <tr><td>날짜 정확도</td><td>${pct(lawAll.dateAccuracy.rate)}</td><td>${pct(aiAll.dateAccuracy.rate)}</td></tr>
   </table>
   <div class="note" style="margin-top:10px">AI 경로는 사용자의 API 키로 브라우저에서 직접 호출하는 옵션입니다. 실패 시 규칙 파서로 자동 폴백하며, 기본값은 꺼져 있습니다.</div>
+  ` : ''}
+
+  ${hasReal ? `
+  <h2>실제 판결문 일반화 검증 (10건 소표본)</h2>
+  <table>
+    <tr><th>지표</th><th>규칙 파서</th><th>AI 경로(GLM-5)</th></tr>
+    <tr><td>관계 F1(엄격)</td><td>${pct(realLaw.overall.relStrict.f1)}</td><td><b>${realAI ? pct(realAI.overall.relStrict.f1) : '—'}</b></td></tr>
+    <tr><td>당사자 F1</td><td>${pct(realLaw.overall.parties.f1)}</td><td>${realAI ? pct(realAI.overall.parties.f1) : '—'}</td></tr>
+  </table>
+  <div class="note" style="margin-top:10px">
+    <b>일반화 갭:</b> 실제 판결문(law.go.kr, 사실관계 부분 verbatim 10건)에서는 합성 골드셋 대비 정확도가 크게 낮아지며,
+    <b>개방 문체에서는 AI 경로가 규칙 파서를 크게 앞섭니다</b>${realAI && realAI.overall.relStrict.f1 > realLaw.overall.relStrict.f1 ? ` (${pct(realAI.overall.relStrict.f1)} vs ${pct(realLaw.overall.relStrict.f1)})` : ''}.
+    이것이 두 경로를 함께 제공하는 이유입니다 — 짧고 통제된 지문(사례집·시험)에는 무료·즉시·오프라인 규칙 파서가,
+    실제 판결문 같은 긴·개방 문체에는 AI 옵트인이 적합합니다.
+    소표본(10건)이므로 신뢰구간이 넓고, 세트 확대를 진행 중입니다.
+  </div>
   ` : ''}
 
   <h2>측정 방법</h2>
