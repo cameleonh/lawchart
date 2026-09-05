@@ -42,22 +42,52 @@ export function findParties(text) {
     add(w);
   }
 
+  // 판결문식 표기: 번호형 역할어(피고 1), 소외·공소외(소외 2, 소외 1 회사), 역할어+회사 복합형(피고 회사)
+  const EDGE = `(?=(?:${PARTICLES})|\\s|$|[,.])`;
+  const CO_SUF = '주식회사|유한회사|회사|은행';
+  const ROLE_PREFIX = /^(?:소외|공소외|원고|피고|피고인|피해자|참가인)$/;
+  for (const m of text.matchAll(new RegExp(`(?<![가-힣\\d])((?:원고|피고|피고인|피해자|참가인) \\d+)${EDGE}`, 'g'))) add(m[1]);
+  for (const m of text.matchAll(new RegExp(`(?<![가-힣\\d])((?:소외인|소외|공소외)(?: \\d+)?)( ?(?:${CO_SUF}))?${EDGE}`, 'g'))) {
+    const whole = (m[1] + (m[2] || '')).trim();
+    if (ROLE_PREFIX.test(whole)) continue;
+    add(whole);
+  }
+  const compoundForms = [];
+  for (const m of text.matchAll(new RegExp(`(?<![가-힣\\d])((?:원고|피고)(?: \\d+)?)( (?:${CO_SUF}))${EDGE}`, 'g'))) {
+    compoundForms.push(m[1] + m[2]);
+    add(m[1] + m[2]);
+  }
+  // 판결문식 복합형이 검출된 지문에서는 bare '회사'류가 같은 표기의 중복이므로 제외
+  const judgmentStyle = compoundForms.length > 0 || /(?<![가-힣\d])(?:소외|공소외)(?:인| \d)/.test(text);
+  // '피고 1 회사'가 있으면 '피고 1'은 제거(bare '피고'는 단독 사용 규칙이 판단)
+  for (const cmp of compoundForms) {
+    const base = cmp.replace(new RegExp(` (?:${CO_SUF})$`), '');
+    if (/ \d+$/.test(base)) set.delete(base);
+  }
+  for (const w of ['원고', '피고', '피고인', '피해자', '참가인']) {
+    const hasNumOrCmp = new RegExp(`(?<![가-힣\\d])${w}(?: \\d+| (?:${CO_SUF}))`).test(text);
+    const standalone = new RegExp(`(?<![가-힣\\d])${w}(?=(?:${PARTICLES}))`).test(text);
+    if (hasNumOrCmp && !standalone) set.delete(w);
+  }
+
   // 빈출 2-4글자 명사(조사 동반 2회 이상) + 단일 조사 언급 이름(에게류 1회)
   const freq = new Map();
   const thingWord = new RegExp(`^(?:${THING_NOUNS})$`);
   for (const m of text.matchAll(/(?<![가-힣\d])((?:[가-힣]){2,4})(?=(?:은|는|이|가|에게|한테|에게서|으로부터|로부터|을|를|와|과|의)(?![가-힣]))/g)) {
     const w = m[1];
-    if (STOPWORDS.test(w) || thingWord.test(w)) continue;
+    if (STOPWORDS.test(w) || thingWord.test(w) || ROLE_PREFIX.test(w)) continue;
     freq.set(w, (freq.get(w) || 0) + 1);
   }
   for (const [w, n] of freq) if (n >= 2) add(w);
   for (const m of text.matchAll(/(?<![가-힣\d])((?:[가-힣]){2,3})(에게|한테|에게서)(?![가-힣])/g)) {
     const w = m[1];
-    if (STOPWORDS.test(w) || thingWord.test(w) || /주식회사|회사|은행$/.test(w)) continue;
+    if (STOPWORDS.test(w) || thingWord.test(w) || /주식회사|회사|은행$/.test(w) || ROLE_PREFIX.test(w)) continue;
     add(w);
   }
 
-  return order.filter(p => !ORG_WORDS.includes(p));
+  // 판결문식 지문에서 freq가 재추가한 bare '회사'류도 최종 제외 (합성 지문의 '회사' party는 유지)
+  if (judgmentStyle) for (const w of ['회사', '주식회사', '유한회사', '은행']) set.delete(w);
+  return [...new Set(order)].filter(p => set.has(p) && !ORG_WORDS.includes(p));
 }
 
 /* ── 날짜 마스킹·상대 날짜 환산 ──────────────────────────── */

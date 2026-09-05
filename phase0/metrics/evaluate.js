@@ -43,9 +43,11 @@ const keyPair = r => [r.from, r.to].sort().join('~');
 function loadGoldset(which) {
   const files = which === 'holdout'
     ? [['../goldset2/holdout-synth.json', '합성홀드아웃'], ['../goldset2/holdout-court.json', '판결문체홀드아웃']]
-    : which === 'all'
-      ? [...DOMAIN_FILES, ['../goldset2/holdout-synth.json', '합성홀드아웃'], ['../goldset2/holdout-court.json', '판결문체홀드아웃']]
-      : DOMAIN_FILES;
+    : which === 'real'
+      ? [['../goldset3/real-cases.json', '실판례홀드아웃']]
+      : which === 'all'
+        ? [...DOMAIN_FILES, ['../goldset2/holdout-synth.json', '합성홀드아웃'], ['../goldset2/holdout-court.json', '판결문체홀드아웃']]
+        : DOMAIN_FILES;
   return files.flatMap(([file]) => JSON.parse(fs.readFileSync(path.resolve(GOLD_DIR, file), 'utf8')));
 }
 

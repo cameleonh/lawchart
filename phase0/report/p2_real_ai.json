@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "cases": 10,
+    "parser": "original plot parseFacts (baseline)",
+    "date": "2026-09-05T10:06:54.645Z"
+  },
+  "overall": {
+    "parties": {
+      "precision": 0.8974,
+      "recall": 0.9211,
+      "f1": 0.9091
+    },
+    "relStrict": {
+      "precision": 0.6591,
+      "recall": 0.7073,
+      "f1": 0.6824
+    },
+    "relDirless": {
+      "precision": 0.6977,
+      "recall": 0.7317,
+      "f1": 0.7143
+    },
+    "relPair": {
+      "precision": 0.7917,
+      "recall": 0.7917,
+      "f1": 0.7917
+    },
+    "objects": {
+      "precision": 0.4615,
+      "recall": 1,
+      "f1": 0.6316
+    }
+  },
+  "dateAccuracy": {
+    "hit": 20,
+    "total": 35,
+    "rate": 0.5714
+  },
+  "byDomain": {
+    "civil": {
+      "parties": {
+        "precision": 0.9063,
+        "recall": 0.9355,
+        "f1": 0.9206
+      },
+      "relStrict": {
+        "precision": 0.7105,
+        "recall": 0.75,
+        "f1": 0.7297
+      },
+      "relDirless": {
+        "precision": 0.7568,
+        "recall": 0.7778,
+        "f1": 0.7671
+      },
+      "relPair": {
+        "precision": 0.8095,
+        "recall": 0.8095,
+        "f1": 0.8095
+      },
+      "objects": {
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.6667
+      }
+    },
+    "criminal": {
+      "parties": {
+        "precision": 0.8571,
+        "recall": 0.8571,
+        "f1": 0.8571
+      },
+      "relStrict": {
+        "precision": 0.3333,
+        "recall": 0.4,
+        "f1": 0.3636
+      },
+      "relDirless": {
+        "precision": 0.3333,
+        "recall": 0.4,
+        "f1": 0.3636
+      },
+      "relPair": {
+        "precision": 0.6667,
+        "recall": 0.6667,
+        "f1": 0.6667
+      },
+      "objects": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      }
+    }
+  },
+  "byDifficulty": {
+    "hard": {
+      "parties": {
+        "precision": 0.9355,
+        "recall": 0.9667,
+        "f1": 0.9508
+      },
+      "relStrict": {
+        "precision": 0.6923,
+        "recall": 0.7297,
+        "f1": 0.7105
+      },
+      "relDirless": {
+        "precision": 0.7368,
+        "recall": 0.7568,
+        "f1": 0.7467
+      },
+      "relPair": {
+        "precision": 0.8571,
+        "recall": 0.8571,
+        "f1": 0.8571
+      },
+      "objects": {
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.6667
+      }
+    },
+    "medium": {
+      "parties": {
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75
+      },
+      "relStrict": {
+        "precision": 0.4,
+        "recall": 0.5,
+        "f1": 0.4444
+      },
+      "relDirless": {
+        "precision": 0.4,
+        "recall": 0.5,
+        "f1": 0.4444
+      },
+      "relPair": {
+        "precision": 0.3333,
+        "recall": 0.3333,
+        "f1": 0.3333
+      },
+      "objects": {
+        "precision": 0.3333,
+        "recall": 1,
+        "f1": 0.5
+      }
+    }
+  },
+  "perCase": [
+    {
+      "id": "r-01",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0.75,
+      "strictF1": 0.5,
+      "missedGold": [
+        "원고|소외인|매도",
+        "SC은행|피고|금전대여",
+        "피고|SC은행|근저당권 설정"
+      ],
+      "extraPred": [
+        "원고|소외인|계약",
+        "주식회사 한국스탠다드차타드은행|피고|금전대여",
+        "피고|주식회사 한국스탠다드차타드은행|근저당권 설정"
+      ]
+    },
+    {
+      "id": "r-02",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 0.6667,
+      "missedGold": [
+        "원고|소외인|임대"
+      ],
+      "extraPred": [
+        "원고|소외인|계약",
+        "원고|소외인|전세권 설정"
+      ]
+    },
+    {
+      "id": "r-03",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 0.5,
+      "strictF1": 0,
+      "missedGold": [
+        "소외 1|원고|매도"
+      ],
+      "extraPred": [
+        "망 소외 1|원고|매도"
+      ]
+    },
+    {
+      "id": "r-04",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0.9231,
+      "strictF1": 0.4444,
+      "missedGold": [
+        "피고 1|원고|지급",
+        "피고 2|원고|지급"
+      ],
+      "extraPred": [
+        "원고|소외 2|계약",
+        "원고|소외 3|계약",
+        "피고들|원고|변제"
+      ]
+    },
+    {
+      "id": "r-05",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 0.8889,
+      "missedGold": [],
+      "extraPred": [
+        "원고|피고 1 회사|지급"
+      ]
+    },
+    {
+      "id": "r-06",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 0.8,
+      "missedGold": [
+        "대청교역|대구경북섬유신용협동조합|근저당권 설정",
+        "황금리조트|원고|금전대여"
+      ],
+      "extraPred": [
+        "원고|황금리조트|금전대여"
+      ]
+    },
+    {
+      "id": "r-07",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "r-08",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 0.75,
+      "strictF1": 0,
+      "missedGold": [
+        "피고인|피해자|기망"
+      ],
+      "extraPred": [
+        "피고인|공소외 1|기망",
+        "공소외 1|피고인|인도"
+      ]
+    },
+    {
+      "id": "r-09",
+      "domain": "criminal",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 0.5,
+      "missedGold": [
+        "원고 1|피고|금전대여",
+        "원고 2|피고|금전대여"
+      ],
+      "extraPred": [
+        "피고|원고 2|지급",
+        "피고|원고 1|지급"
+      ]
+    },
+    {
+      "id": "r-10",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    }
+  ]
+}

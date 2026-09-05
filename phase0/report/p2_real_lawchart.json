@@ -1,0 +1,310 @@
+{
+  "meta": {
+    "cases": 10,
+    "parser": "original plot parseFacts (baseline)",
+    "date": "2026-09-05T10:08:13.465Z"
+  },
+  "overall": {
+    "parties": {
+      "precision": 0.8182,
+      "recall": 0.9474,
+      "f1": 0.878
+    },
+    "relStrict": {
+      "precision": 0.3438,
+      "recall": 0.2683,
+      "f1": 0.3014
+    },
+    "relDirless": {
+      "precision": 0.4194,
+      "recall": 0.3171,
+      "f1": 0.3611
+    },
+    "relPair": {
+      "precision": 0.75,
+      "recall": 0.375,
+      "f1": 0.5
+    },
+    "objects": {
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    }
+  },
+  "dateAccuracy": {
+    "hit": 6,
+    "total": 35,
+    "rate": 0.1714
+  },
+  "byDomain": {
+    "civil": {
+      "parties": {
+        "precision": 0.8788,
+        "recall": 0.9355,
+        "f1": 0.9063
+      },
+      "relStrict": {
+        "precision": 0.3571,
+        "recall": 0.2778,
+        "f1": 0.3125
+      },
+      "relDirless": {
+        "precision": 0.4444,
+        "recall": 0.3333,
+        "f1": 0.381
+      },
+      "relPair": {
+        "precision": 0.8,
+        "recall": 0.381,
+        "f1": 0.5161
+      },
+      "objects": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      }
+    },
+    "criminal": {
+      "parties": {
+        "precision": 0.6364,
+        "recall": 1,
+        "f1": 0.7778
+      },
+      "relStrict": {
+        "precision": 0.25,
+        "recall": 0.2,
+        "f1": 0.2222
+      },
+      "relDirless": {
+        "precision": 0.25,
+        "recall": 0.2,
+        "f1": 0.2222
+      },
+      "relPair": {
+        "precision": 0.5,
+        "recall": 0.3333,
+        "f1": 0.4
+      },
+      "objects": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      }
+    }
+  },
+  "byDifficulty": {
+    "hard": {
+      "parties": {
+        "precision": 0.8235,
+        "recall": 0.9333,
+        "f1": 0.875
+      },
+      "relStrict": {
+        "precision": 0.3077,
+        "recall": 0.2162,
+        "f1": 0.254
+      },
+      "relDirless": {
+        "precision": 0.36,
+        "recall": 0.2432,
+        "f1": 0.2903
+      },
+      "relPair": {
+        "precision": 0.6667,
+        "recall": 0.2857,
+        "f1": 0.4
+      },
+      "objects": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      }
+    },
+    "medium": {
+      "parties": {
+        "precision": 0.8,
+        "recall": 1,
+        "f1": 0.8889
+      },
+      "relStrict": {
+        "precision": 0.5,
+        "recall": 0.75,
+        "f1": 0.6
+      },
+      "relDirless": {
+        "precision": 0.6667,
+        "recall": 1,
+        "f1": 0.8
+      },
+      "relPair": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "objects": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      }
+    }
+  },
+  "perCase": [
+    {
+      "id": "r-01",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0.8889,
+      "strictF1": 0.2,
+      "missedGold": [
+        "원고|소외인|매도",
+        "소외인|피고|소유권이전등기",
+        "원고|피고|명의신탁",
+        "SC은행|피고|금전대여",
+        "피고|SC은행|근저당권 설정"
+      ],
+      "extraPred": [
+        "원고|소외인|계약",
+        "소외인|원고|소유권이전등기",
+        "소외인|원고|명의신탁"
+      ]
+    },
+    {
+      "id": "r-02",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 0.6154,
+      "missedGold": [],
+      "extraPred": [
+        "피고|소외인|임대",
+        "원고|소외인|계약",
+        "원고|소외인|전세권 설정",
+        "소외인|피고|전세권 설정",
+        "소외인|원고|임대"
+      ]
+    },
+    {
+      "id": "r-03",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "r-04",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0.9231,
+      "strictF1": 0.3333,
+      "missedGold": [
+        "원고|피고 2|계약",
+        "피고 1|원고|지급",
+        "피고 2|원고|지급"
+      ],
+      "extraPred": [
+        "원고|소외 1 회사|지급"
+      ]
+    },
+    {
+      "id": "r-05",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0.8571,
+      "strictF1": 0,
+      "missedGold": [
+        "원고|피고 3 회사|계약",
+        "피고 1 회사|원고|금전대여",
+        "피고 1 회사|원고|지급",
+        "원고|피고 1 회사|변제"
+      ],
+      "extraPred": [
+        "원고|내용|금전대여",
+        "원고|내용|지급"
+      ]
+    },
+    {
+      "id": "r-06",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0.8333,
+      "strictF1": 0.1818,
+      "missedGold": [
+        "대구경북섬유신용협동조합|소외 3|금전대여",
+        "대청교역|대구경북섬유신용협동조합|근저당권 설정",
+        "소외 3|대구경북섬유신용협동조합|근저당권 설정",
+        "대청교역|황금리조트|매도",
+        "대청교역|황금리조트|소유권이전등기",
+        "황금리조트|원고|금전대여",
+        "황금리조트|원고|가등기 설정"
+      ],
+      "extraPred": [
+        "소외 3|소외 2|계약",
+        "소외 3|소외 2|근저당권 설정"
+      ]
+    },
+    {
+      "id": "r-07",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 0.1818,
+      "missedGold": [
+        "피고 2|피고 1|금전대여",
+        "피고 1|피고 2|근저당권 설정",
+        "소외 1|피고 2|근저당권 설정",
+        "피고 1|피고 2|가등기 설정",
+        "소외 1|원고|근저당권 설정",
+        "피고 1|피고 2|변제"
+      ],
+      "extraPred": [
+        "원고|소외 1|변제",
+        "원고|소외 1|근저당권 설정",
+        "원고|소외 1|지급"
+      ]
+    },
+    {
+      "id": "r-08",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 0.8889,
+      "strictF1": 0.6667,
+      "missedGold": [],
+      "extraPred": [
+        "피고인|피해자|입금"
+      ]
+    },
+    {
+      "id": "r-09",
+      "domain": "criminal",
+      "difficulty": "hard",
+      "partiesF1": 0.6667,
+      "strictF1": 0,
+      "missedGold": [
+        "원고 1|피고|금전대여",
+        "원고 2|피고|금전대여",
+        "피고|원고 1|기망",
+        "피고|원고 2|기망"
+      ],
+      "extraPred": [
+        "피고|원고들|지급",
+        "피고|원고들|기망"
+      ]
+    },
+    {
+      "id": "r-10",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 0.8,
+      "strictF1": 0.4,
+      "missedGold": [
+        "피고 회사|원고|지급"
+      ],
+      "extraPred": [
+        "원고|피고 회사|지급",
+        "원고|피고 회사|소유권이전등기"
+      ]
+    }
+  ]
+}
