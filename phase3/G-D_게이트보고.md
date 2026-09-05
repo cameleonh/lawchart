@@ -32,7 +32,8 @@
 - [x] F7 완성 (자동저장·사건 파일·PNG/SVG)
 - [x] F8 쟁점 메모
 - [x] 배포 지침·공개 구성 확정 (reference/ 제외)
-- [x] PRD v0.2 (D5) 갱신
-- [x] 코드 검증 통과
-- [ ] **오너 G-D 공개 승인 + 상표 확인 → 배포 실행**
-- [ ] (배포 후) Phase 4 (AI 옵트인 경로, G-E) — 별도 결정
+- [x] PRD v0.2→v0.3 (D5·D1 개정) 갱신
+- [x] 코드 검증 통과 (로컬 E2E + 리팩토링 후 재검증)
+- [x] **G-D 공개 승인 (2026-09-05, 오너 "다 진행해" — 도메인 github.io·원작자 한 줄 크레딧·배포 대행 위임)**
+- [x] **배포 완료 (2026-09-05)**: github.com/cameleonh/lawchart (공개, reference/ 제외 37파일) + GitHub Pages **https://cameleonh.github.io/lawchart/** — 전 경로 200 + **라이브 URL 대상 E2E PASS** (관계도·타임라인·쟁점 메모·자동저장·콘솔 에러 0)
+- [ ] (차기) Phase 4 (AI 옵트인 경로, G-E) — 별도 결정

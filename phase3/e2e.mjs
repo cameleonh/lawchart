@@ -1,12 +1,12 @@
 // Lawchart E2E 스모크 — 헤드리스 크롬 CDP (검증된 파이프라인)
-// 전제: dev-server.mjs(8123) + 크롬 --remote-debugging-port=9223 실행 중
-// 사용법: node phase3/e2e.mjs
-const PORT = 9223, APP = 'http://localhost:8123/';
+// 전제: 크롬 --remote-debugging-port=9223 실행 중 (로컬은 dev-server.mjs(8123)도)
+// 사용법: node phase3/e2e.mjs [대상URL]  (기본 http://localhost:8123/, 라이브: https://cameleonh.github.io/lawchart/app/)
+const PORT = 9223, APP = process.argv[2] || 'http://localhost:8123/';
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function main() {
   const targets = await (await fetch(`http://localhost:${PORT}/json`)).json();
-  const page = targets.find(t => t.type === 'page' && t.url.startsWith('http://localhost:8123'));
+  const page = targets.find(t => t.type === 'page' && t.url.startsWith(APP));
   if (!page) throw new Error('page target 없음: ' + targets.map(t => t.url).join(' | '));
   const ws = new WebSocket(page.webSocketDebuggerUrl);
   await new Promise((res, rej) => { ws.onopen = res; ws.onerror = () => rej(new Error('ws 연결 실패')); });
