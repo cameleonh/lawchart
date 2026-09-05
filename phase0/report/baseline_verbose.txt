@@ -1,0 +1,150 @@
+# Lawgram 골드셋 기준선 — original plot parseFacts (baseline)
+사건 60건 · 측정일 2026-09-05T04:29:01.914Z
+
+| 지표 | P | R | F1 |
+|---|---|---|---|
+| 당사자 | 0.902 | 0.935 | **0.918** |
+| 관계(엄격: 쌍+방향+라벨) | 0.654 | 0.541 | **0.592** |
+| 관계(방향 무시) | 0.775 | 0.633 | 0.697 |
+| 관계(쌍만) | 0.930 | 0.716 | 0.809 |
+| 목적물 | 0.750 | 0.450 | 0.563 |
+
+날짜 정확도(엄격 TP 중): 52/95 = 0.547
+
+| 법역 | 당사자 F1 | 관계 F1(엄격) |
+|---|---|---|
+| 민법 | 0.944 | 0.598 |
+| 상법 | 0.784 | 0.533 |
+| 형사 | 1.000 | 0.571 |
+| 민사소송법 | 0.909 | 0.667 |
+
+| 난이도 | 당사자 F1 | 관계 F1(엄격) |
+|---|---|---|
+| basic | 0.924 | 0.627 |
+| medium | 0.913 | 0.617 |
+| hard | 0.917 | 0.333 |
+
+## 사건별 누락(정답−예측) / 과잉(예측−정답)
+
+**civil-003** (civil/basic) strict F1=0.000
+  - 누락: 갑|을|임대 / 갑|을|전세권 설정
+  - 과잉: 을|갑|임대
+
+**civil-008** (civil/medium) strict F1=0.000
+  - 누락: 甲|乙|상속 / 甲|丙|상속
+
+**civil-010** (civil/medium) strict F1=0.000
+  - 누락: 갑|병|채권양도
+  - 과잉: 갑|병|양도
+
+**civil-012** (civil/basic) strict F1=0.000
+  - 누락: 을|갑|담보 제공
+  - 과잉: 을|갑|금전대여 / 을|갑|매도
+
+**civil-013** (civil/medium) strict F1=0.000
+  - 누락: 갑|병|금전대여 / 병|갑|질권 설정
+  - 과잉: 갑|병|질권 설정
+
+**civil-014** (civil/hard) strict F1=0.000
+  - 누락: 갑|을|위임 / 을|갑|청구·제소 / 을|갑|유치권
+  - 과잉: 을|수리|위임 / 을|수리|청구·제소
+
+**civil-015** (civil/medium) strict F1=0.400
+  - 누락: 갑|을|반환청구
+  - 과잉: 갑|을|계약 / 을|갑|반환청구
+
+**civil-016** (civil/medium) strict F1=0.500
+  - 누락: 을|갑|기망
+  - 과잉: 갑|을|기망
+
+**civil-017** (civil/basic) strict F1=0.500
+  - 누락: 을|병|양도
+  - 과잉: 병|을|양도
+
+**civil-018** (civil/medium) strict F1=0.000
+  - 누락: 을|갑|매도
+  - 과잉: 갑|을|매도 / 병|갑|대리 / 병|갑|계약
+
+**civil-019** (civil/basic) strict F1=0.000
+  - 누락: 갑|을|명의신탁
+
+**civil-021** (civil/basic) strict F1=0.000
+  - 누락: A주식회사|B|고용
+
+**civil-022** (civil/medium) strict F1=0.000
+  - 누락: 갑|을|조합 / 갑|병|조합 / 을|병|조합
+
+**civil-023** (civil/hard) strict F1=0.333
+  - 누락: 갑|병|매도
+  - 과잉: 갑|을|매도 / 을|갑|대리 / 을|병|매도
+
+**civil-024** (civil/basic) strict F1=0.000
+  - 누락: 갑|을|혼인 / 갑|을|이혼
+  - 과잉: 을|갑|혼인
+
+**civil-027** (civil/hard) strict F1=0.667
+  - 누락: 갑|을|가등기 설정
+
+**civil-028** (civil/hard) strict F1=0.667
+  - 과잉: 갑|을|인도
+
+**com-001** (commercial/basic) strict F1=0.000
+  - 누락: 갑|을|약속어음 발행 / 을|병|배서양도
+  - 과잉: 갑|을|인도 / 을|병|양도
+
+**com-002** (commercial/medium) strict F1=0.667
+  - 과잉: 병|을|지급
+
+**com-004** (commercial/basic) strict F1=0.000
+  - 누락: 갑|B주식회사|신주 인수
+
+**com-005** (commercial/medium) strict F1=0.000
+  - 누락: 갑|D주식회사|출자 / 을|D주식회사|출자 / 병|D주식회사|출자
+
+**com-006** (commercial/medium) strict F1=0.000
+  - 누락: 갑|E주식회사|계약
+
+**com-007** (commercial/basic) strict F1=0.800
+  - 과잉: 갑|을|지급
+
+**com-010** (commercial/medium) strict F1=0.000
+  - 누락: 을|갑|매도 / 갑|을|약속어음 발행
+  - 과잉: 갑|을|매도
+
+**cri-001** (criminal/basic) strict F1=0.000
+  - 누락: 갑|을|기망
+
+**cri-003** (criminal/basic) strict F1=0.667
+  - 누락: 병|갑|강취
+
+**cri-004** (criminal/medium) strict F1=0.000
+  - 누락: 을|갑|보관위탁 / 갑|을|횡령
+  - 과잉: 을|갑|위임
+
+**cri-005** (criminal/medium) strict F1=0.800
+  - 누락: 을|갑|배임
+
+**cri-008** (criminal/basic) strict F1=0.000
+  - 누락: 을|갑|강박
+
+**cri-009** (criminal/medium) strict F1=0.000
+  - 누락: 갑|을|문서위조
+
+**cri-010** (criminal/hard) strict F1=0.000
+  - 누락: 을|갑|점유이탈물횡령
+
+**pro-001** (procedural/basic) strict F1=0.667
+  - 과잉: 갑|을|지급
+
+**pro-002** (procedural/basic) strict F1=0.000
+  - 누락: 갑|을|가압류
+  - 과잉: 법원|갑|가압류
+
+**pro-006** (procedural/medium) strict F1=0.000
+  - 누락: 갑|을|청구·제소
+
+**pro-010** (procedural/medium) strict F1=0.400
+  - 누락: 을|갑|근저당권 설정 / 갑|을|금전대여
+  - 과잉: 갑|을|근저당권 설정
+
+(상세 JSON → C:\Users\x1gen10\Downloads\lawgram\phase0\report\baseline_original.json)

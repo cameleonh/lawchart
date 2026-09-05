@@ -1,0 +1,404 @@
+[
+  {
+    "id": "civil-001",
+    "domain": "civil",
+    "difficulty": "basic",
+    "text": "甲은 2020. 3. 1. 乙에게 X토지를 3억원에 매도하고 같은 날 소유권이전등기를 경료하여 주었다.",
+    "parties": ["甲", "乙"],
+    "objects": ["X토지"],
+    "relations": [
+      { "from": "甲", "to": "乙", "label": "매도", "kind": "contract", "date": "2020. 3. 1.", "obj": "X토지" },
+      { "from": "甲", "to": "乙", "label": "소유권이전등기", "kind": "contract", "date": "2020. 3. 1.", "obj": "X토지" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-002",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "甲은 2020. 3. 1. 乙에게 X토지를 3억원에 매도하였다. 乙은 그 중 1억원을 지급하지 않았다. 甲은 2021. 6. 1. 乙을 상대로 소를 제기하였다.",
+    "parties": ["甲", "乙"],
+    "objects": ["X토지"],
+    "relations": [
+      { "from": "甲", "to": "乙", "label": "매도", "kind": "contract", "date": "2020. 3. 1.", "obj": "X토지" },
+      { "from": "甲", "to": "乙", "label": "청구·제소", "kind": "dispute", "date": "2021. 6. 1.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-003",
+    "domain": "civil",
+    "difficulty": "basic",
+    "text": "갑은 2019. 5. 1. 을에게 A주택을 보증금 5천만원에 세를 주고 전세권을 설정해 주었다.",
+    "parties": ["갑", "을"],
+    "objects": ["A주택"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "임대", "kind": "contract", "date": "2019. 5. 1.", "obj": "A주택" },
+      { "from": "갑", "to": "을", "label": "전세권 설정", "kind": "security", "date": "2019. 5. 1.", "obj": "A주택" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-004",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "갑은 2018. 9. 1. 을에게 B상가를 임대하였다. 을은 2020. 8. 1. 병에게 그 상가를 전대하였다.",
+    "parties": ["갑", "을", "병"],
+    "objects": ["B상가"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "임대", "kind": "contract", "date": "2018. 9. 1.", "obj": "B상가" },
+      { "from": "을", "to": "병", "label": "전대", "kind": "contract", "date": "2020. 8. 1.", "obj": "B상가" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-005",
+    "domain": "civil",
+    "difficulty": "basic",
+    "text": "갑은 2018. 4. 10. 을에게 2억원을 대여하였다. 을은 같은 날 자신 소유의 C건물에 갑을 위하여 근저당권을 설정하였다.",
+    "parties": ["갑", "을"],
+    "objects": ["C건물"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "금전대여", "kind": "money", "date": "2018. 4. 10.", "obj": null },
+      { "from": "을", "to": "갑", "label": "근저당권 설정", "kind": "security", "date": "2018. 4. 10.", "obj": "C건물" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-006",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "甲은 2020. 1. 5. 乙에게 X토지를 매도하고 소유권이전등기를 마쳤다. 乙은 2020. 6. 10. 丙에게 같은 토지를 전매하였다. 丙은 2020. 7. 2. 丁에게 이를 다시 매도하였다.",
+    "parties": ["甲", "乙", "丙", "丁"],
+    "objects": ["X토지"],
+    "relations": [
+      { "from": "甲", "to": "乙", "label": "매도", "kind": "contract", "date": "2020. 1. 5.", "obj": "X토지" },
+      { "from": "甲", "to": "乙", "label": "소유권이전등기", "kind": "contract", "date": "2020. 1. 5.", "obj": "X토지" },
+      { "from": "乙", "to": "丙", "label": "전매", "kind": "contract", "date": "2020. 6. 10.", "obj": "X토지" },
+      { "from": "丙", "to": "丁", "label": "전매", "kind": "contract", "date": "2020. 7. 2.", "obj": "X토지" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-007",
+    "domain": "civil",
+    "difficulty": "basic",
+    "text": "甲은 2015. 3. 1. 아들 乙에게 Y주택을 증여하고 소유권이전등기를 하여 주었다.",
+    "parties": ["甲", "乙"],
+    "objects": ["Y주택"],
+    "relations": [
+      { "from": "甲", "to": "乙", "label": "증여", "kind": "contract", "date": "2015. 3. 1.", "obj": "Y주택" },
+      { "from": "甲", "to": "乙", "label": "소유권이전등기", "kind": "contract", "date": "2015. 3. 1.", "obj": "Y주택" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-008",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "甲은 2020. 9. 1. 사망하였다. 甲의 상속인은 배우자 乙과 아들 丙이며, 두 사람은 2020. 10. 1. 상속재산인 Z토지를 상속받았다.",
+    "parties": ["甲", "乙", "丙"],
+    "objects": ["Z토지"],
+    "relations": [
+      { "from": "甲", "to": "乙", "label": "상속", "kind": "status", "date": "2020. 10. 1.", "obj": "Z토지" },
+      { "from": "甲", "to": "丙", "label": "상속", "kind": "status", "date": "2020. 10. 1.", "obj": "Z토지" }
+    ],
+    "events": [
+      { "date": "2020. 9. 1.", "text": "甲 사망" }
+    ]
+  },
+  {
+    "id": "civil-009",
+    "domain": "civil",
+    "difficulty": "basic",
+    "text": "甲은 2021. 2. 1. 유언으로 자신 소유의 그림을 친구 乙에게 유증하였다. 甲은 2021. 3. 1. 사망하였다.",
+    "parties": ["甲", "乙"],
+    "objects": ["그림"],
+    "relations": [
+      { "from": "甲", "to": "乙", "label": "유증", "kind": "status", "date": "2021. 2. 1.", "obj": "그림" }
+    ],
+    "events": [
+      { "date": "2021. 3. 1.", "text": "甲 사망" }
+    ]
+  },
+  {
+    "id": "civil-010",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "갑은 을에 대하여 물품대금 5천만원의 채권을 가지고 있었다. 갑은 2020. 11. 1. 그 채권을 병에게 양도하였다.",
+    "parties": ["갑", "을", "병"],
+    "objects": [],
+    "relations": [
+      { "from": "갑", "to": "병", "label": "채권양도", "kind": "contract", "date": "2020. 11. 1.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-011",
+    "domain": "civil",
+    "difficulty": "basic",
+    "text": "갑은 2022. 1. 1. 을에게서 1억원을 차용하였다. 병은 갑의 위 채무에 대하여 을에게 보증하였다.",
+    "parties": ["갑", "을", "병"],
+    "objects": [],
+    "relations": [
+      { "from": "을", "to": "갑", "label": "금전대여", "kind": "money", "date": "2022. 1. 1.", "obj": null },
+      { "from": "병", "to": "을", "label": "보증", "kind": "security", "date": "2022. 1. 1.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-012",
+    "domain": "civil",
+    "difficulty": "basic",
+    "text": "을은 2021. 7. 1. 갑에게 차용금의 담보로 자동차를 양도담보로 제공하였다.",
+    "parties": ["갑", "을"],
+    "objects": ["자동차"],
+    "relations": [
+      { "from": "을", "to": "갑", "label": "담보 제공", "kind": "security", "date": "2021. 7. 1.", "obj": "자동차" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-013",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "병은 2020. 3. 3. 갑에게서 3천만원을 빌리면서 자신의 시계를 담보로 질권을 설정하여 주었다.",
+    "parties": ["갑", "병"],
+    "objects": ["시계"],
+    "relations": [
+      { "from": "갑", "to": "병", "label": "금전대여", "kind": "money", "date": "2020. 3. 3.", "obj": null },
+      { "from": "병", "to": "갑", "label": "질권 설정", "kind": "security", "date": "2020. 3. 3.", "obj": "시계" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-014",
+    "domain": "civil",
+    "difficulty": "hard",
+    "text": "을은 갑으로부터 컴퓨터 수리를 위탁받았다. 을은 2021. 5. 1. 수리를 마치고 수리비를 청구하였으나 갑이 이를 지급하지 않자 컴퓨터를 유치하고 있다.",
+    "parties": ["갑", "을"],
+    "objects": ["컴퓨터"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "위임", "kind": "contract", "date": null, "obj": "컴퓨터" },
+      { "from": "을", "to": "갑", "label": "청구·제소", "kind": "dispute", "date": "2021. 5. 1.", "obj": null },
+      { "from": "을", "to": "갑", "label": "유치권", "kind": "security", "date": "2021. 5. 1.", "obj": "컴퓨터" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-015",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "갑은 2022. 3. 1. 을에게 A자동차를 4천만원에 매도하였다. 을이 대금을 지급하지 않자 갑은 2022. 4. 1. 매매계약을 해제하는 의사표시를 하고 자동차의 반환을 청구하였다.",
+    "parties": ["갑", "을"],
+    "objects": ["A자동차"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "매도", "kind": "contract", "date": "2022. 3. 1.", "obj": "A자동차" },
+      { "from": "갑", "to": "을", "label": "반환청구", "kind": "dispute", "date": "2022. 4. 1.", "obj": "A자동차" }
+    ],
+    "events": [
+      { "date": "2022. 4. 1.", "text": "갑→을 해제 통지" }
+    ]
+  },
+  {
+    "id": "civil-016",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "을은 허위 사실을 말하여 갑을 속이고 2020. 8. 8. 갑에게서 5천만원을 빌렸다. 갑은 2020. 10. 1. 사기를 이유로 대여계약을 취소하였다.",
+    "parties": ["갑", "을"],
+    "objects": [],
+    "relations": [
+      { "from": "을", "to": "갑", "label": "기망", "kind": "dispute", "date": "2020. 8. 8.", "obj": null },
+      { "from": "갑", "to": "을", "label": "금전대여", "kind": "money", "date": "2020. 8. 8.", "obj": null }
+    ],
+    "events": [
+      { "date": "2020. 10. 1.", "text": "갑→을 취소 통지" }
+    ]
+  },
+  {
+    "id": "civil-017",
+    "domain": "civil",
+    "difficulty": "basic",
+    "text": "병은 2021. 1. 1. 을을 협박하여 을 소유의 부동산을 헐값에 양도받았다.",
+    "parties": ["을", "병"],
+    "objects": ["부동산"],
+    "relations": [
+      { "from": "병", "to": "을", "label": "강박", "kind": "dispute", "date": "2021. 1. 1.", "obj": null },
+      { "from": "을", "to": "병", "label": "양도", "kind": "contract", "date": "2021. 1. 1.", "obj": "부동산" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-018",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "17세인 갑은 2022. 5. 5. 전자제품점을 운영하는 을에게서 스마트폰을 150만원에 샀다. 갑의 법정대리인 병은 2022. 6. 1. 위 매매계약을 취소하였다.",
+    "parties": ["갑", "을", "병"],
+    "objects": ["스마트폰"],
+    "relations": [
+      { "from": "을", "to": "갑", "label": "매도", "kind": "contract", "date": "2022. 5. 5.", "obj": "스마트폰" }
+    ],
+    "events": [
+      { "date": "2022. 6. 1.", "text": "병→을 취소 통지" }
+    ]
+  },
+  {
+    "id": "civil-019",
+    "domain": "civil",
+    "difficulty": "basic",
+    "text": "갑은 2019. 1. 1. 자신 소유의 토지를 을 앞으로 명의신탁하였다.",
+    "parties": ["갑", "을"],
+    "objects": ["토지"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "명의신탁", "kind": "contract", "date": "2019. 1. 1.", "obj": "토지" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-020",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "갑은 2021. 9. 1. 을에게 주택 신축 공사를 3억원에 도급주었다. 을은 2022. 2. 1. 공사를 완성하고 갑에게 주택을 인도하였다.",
+    "parties": ["갑", "을"],
+    "objects": ["주택"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "도급", "kind": "contract", "date": "2021. 9. 1.", "obj": null },
+      { "from": "을", "to": "갑", "label": "인도", "kind": "contract", "date": "2022. 2. 1.", "obj": "주택" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-021",
+    "domain": "civil",
+    "difficulty": "basic",
+    "text": "A주식회사는 2020. 7. 1. B를 근로자로 고용하였다.",
+    "parties": ["A주식회사", "B"],
+    "objects": [],
+    "relations": [
+      { "from": "A주식회사", "to": "B", "label": "고용", "kind": "contract", "date": "2020. 7. 1.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-022",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "갑, 을, 병은 2021. 4. 1. 공동으로 음식점을 운영하기 위하여 조합을 결성하였다.",
+    "parties": ["갑", "을", "병"],
+    "objects": [],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "조합", "kind": "contract", "date": "2021. 4. 1.", "obj": null },
+      { "from": "갑", "to": "병", "label": "조합", "kind": "contract", "date": "2021. 4. 1.", "obj": null },
+      { "from": "을", "to": "병", "label": "조합", "kind": "contract", "date": "2021. 4. 1.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-023",
+    "domain": "civil",
+    "difficulty": "hard",
+    "text": "갑은 2020. 10. 10. 을에게 D토지를 매도할 수 있는 대리권을 수여하였다. 을은 2020. 11. 11. 갑을 대리하여 병에게 D토지를 매도하였다.",
+    "parties": ["갑", "을", "병"],
+    "objects": ["D토지"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "대리", "kind": "contract", "date": "2020. 10. 10.", "obj": null },
+      { "from": "갑", "to": "병", "label": "매도", "kind": "contract", "date": "2020. 11. 11.", "obj": "D토지" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-024",
+    "domain": "civil",
+    "difficulty": "basic",
+    "text": "갑과 을은 2010. 6. 1. 혼인하였다. 두 사람은 2022. 3. 1. 이혼하였다.",
+    "parties": ["갑", "을"],
+    "objects": [],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "혼인", "kind": "status", "date": "2010. 6. 1.", "obj": null },
+      { "from": "갑", "to": "을", "label": "이혼", "kind": "status", "date": "2022. 3. 1.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-025",
+    "domain": "civil",
+    "difficulty": "basic",
+    "text": "병은 2015. 8. 8. 배우자의 아들 丁을 입양하였다.",
+    "parties": ["병", "丁"],
+    "objects": [],
+    "relations": [
+      { "from": "병", "to": "丁", "label": "입양", "kind": "status", "date": "2015. 8. 8.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-026",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "갑은 2023. 1. 1. 사망하면서 전 재산을 친구 을에게 유증하였다. 갑의 아들 병은 2023. 3. 1. 을에 대하여 유류분반환청구를 하였다.",
+    "parties": ["갑", "을", "병"],
+    "objects": [],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "유증", "kind": "status", "date": "2023. 1. 1.", "obj": null },
+      { "from": "병", "to": "을", "label": "유류분반환청구", "kind": "dispute", "date": "2023. 3. 1.", "obj": null }
+    ],
+    "events": [
+      { "date": "2023. 1. 1.", "text": "갑 사망" }
+    ]
+  },
+  {
+    "id": "civil-027",
+    "domain": "civil",
+    "difficulty": "hard",
+    "text": "갑은 2021. 6. 1. 을과 X토지에 관한 매매계약을 체결하고 소유권이전청구권 가등기를 설정하였다.",
+    "parties": ["갑", "을"],
+    "objects": ["X토지"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "계약", "kind": "contract", "date": "2021. 6. 1.", "obj": "X토지" },
+      { "from": "갑", "to": "을", "label": "가등기 설정", "kind": "security", "date": "2021. 6. 1.", "obj": "X토지" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-028",
+    "domain": "civil",
+    "difficulty": "hard",
+    "text": "갑은 2021. 12. 1. 을에게 물품을 1천만원에 매도하기로 하였다. 갑은 2022. 2. 1. 물품을 인도하려고 이행의 제공을 하였으나 을이 수령을 거절하였다. 갑은 2022. 2. 10. 계약을 해제하였다.",
+    "parties": ["갑", "을"],
+    "objects": ["물품"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "매도", "kind": "contract", "date": "2021. 12. 1.", "obj": "물품" }
+    ],
+    "events": [
+      { "date": "2022. 2. 1.", "text": "갑→을 이행 제공" },
+      { "date": "2022. 2. 1.", "text": "을 수령 거절" },
+      { "date": "2022. 2. 10.", "text": "갑→을 해제 통지" }
+    ]
+  },
+  {
+    "id": "civil-029",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "갑과 을은 X토지를 공유하고 있었다. 갑은 2020. 5. 5. 자신의 지분 2분의 1을 병에게 매도하고 소유권이전등기를 경료하였다.",
+    "parties": ["갑", "을", "병"],
+    "objects": ["X토지"],
+    "relations": [
+      { "from": "갑", "to": "병", "label": "매도", "kind": "contract", "date": "2020. 5. 5.", "obj": "X토지" },
+      { "from": "갑", "to": "병", "label": "소유권이전등기", "kind": "contract", "date": "2020. 5. 5.", "obj": "X토지" }
+    ],
+    "events": []
+  },
+  {
+    "id": "civil-030",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "갑은 2019. 11. 1. 을에게 E아파트를 6억원에 매도하였으나 아직 을에게 인도하지 않았다. 을은 2020. 1. 1. 갑을 상대로 인도를 청구하는 소를 제기하였다.",
+    "parties": ["갑", "을"],
+    "objects": ["E아파트"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "매도", "kind": "contract", "date": "2019. 11. 1.", "obj": "E아파트" },
+      { "from": "을", "to": "갑", "label": "청구·제소", "kind": "dispute", "date": "2020. 1. 1.", "obj": "E아파트" }
+    ],
+    "events": []
+  }
+]

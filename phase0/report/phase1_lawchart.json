@@ -1,0 +1,782 @@
+{
+  "meta": {
+    "cases": 60,
+    "parser": "original plot parseFacts (baseline)",
+    "date": "2026-09-05T06:27:02.725Z"
+  },
+  "overall": {
+    "parties": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "relStrict": {
+      "precision": 0.9798,
+      "recall": 0.9798,
+      "f1": 0.9798
+    },
+    "relDirless": {
+      "precision": 0.9899,
+      "recall": 0.9899,
+      "f1": 0.9899
+    },
+    "relPair": {
+      "precision": 1,
+      "recall": 0.9867,
+      "f1": 0.9933
+    },
+    "objects": {
+      "precision": 0.7708,
+      "recall": 0.9487,
+      "f1": 0.8506
+    }
+  },
+  "dateAccuracy": {
+    "hit": 90,
+    "total": 95,
+    "rate": 0.9474
+  },
+  "byDomain": {
+    "civil": {
+      "parties": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relStrict": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relDirless": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relPair": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "objects": {
+        "precision": 0.84,
+        "recall": 0.9545,
+        "f1": 0.8936
+      }
+    },
+    "commercial": {
+      "parties": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relStrict": {
+        "precision": 0.9444,
+        "recall": 0.9444,
+        "f1": 0.9444
+      },
+      "relDirless": {
+        "precision": 0.9444,
+        "recall": 0.9444,
+        "f1": 0.9444
+      },
+      "relPair": {
+        "precision": 1,
+        "recall": 0.9333,
+        "f1": 0.9655
+      },
+      "objects": {
+        "precision": 0.7273,
+        "recall": 1,
+        "f1": 0.8421
+      }
+    },
+    "criminal": {
+      "parties": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relStrict": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relDirless": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relPair": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "objects": {
+        "precision": 0.6667,
+        "recall": 1,
+        "f1": 0.8
+      }
+    },
+    "procedural": {
+      "parties": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relStrict": {
+        "precision": 0.9091,
+        "recall": 0.9091,
+        "f1": 0.9091
+      },
+      "relDirless": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relPair": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "objects": {
+        "precision": 0.6667,
+        "recall": 0.8,
+        "f1": 0.7273
+      }
+    }
+  },
+  "byDifficulty": {
+    "basic": {
+      "parties": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relStrict": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relDirless": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relPair": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "objects": {
+        "precision": 0.8824,
+        "recall": 1,
+        "f1": 0.9375
+      }
+    },
+    "medium": {
+      "parties": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relStrict": {
+        "precision": 0.963,
+        "recall": 0.963,
+        "f1": 0.963
+      },
+      "relDirless": {
+        "precision": 0.9815,
+        "recall": 0.9815,
+        "f1": 0.9815
+      },
+      "relPair": {
+        "precision": 1,
+        "recall": 0.975,
+        "f1": 0.9873
+      },
+      "objects": {
+        "precision": 0.6538,
+        "recall": 0.8947,
+        "f1": 0.7556
+      }
+    },
+    "hard": {
+      "parties": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relStrict": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relDirless": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relPair": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "objects": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    }
+  },
+  "perCase": [
+    {
+      "id": "civil-001",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-002",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-003",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-004",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-005",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-006",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-007",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-008",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-009",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-010",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-011",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-012",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-013",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-014",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-015",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-016",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-017",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-018",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-019",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-020",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-021",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-022",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-023",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-024",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-025",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-026",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-027",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-028",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-029",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-030",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-001",
+      "domain": "commercial",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-002",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.5,
+      "missedGold": [
+        "병|을|청구·제소"
+      ],
+      "extraPred": [
+        "갑|을|청구·제소"
+      ]
+    },
+    {
+      "id": "com-003",
+      "domain": "commercial",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-004",
+      "domain": "commercial",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-005",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-006",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-007",
+      "domain": "commercial",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-008",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-009",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-010",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-001",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-002",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-003",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-004",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-005",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-006",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-007",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-008",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-009",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-010",
+      "domain": "criminal",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-001",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-002",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-003",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-004",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-005",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-006",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-007",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-008",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 0,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-009",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-010",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.6667,
+      "missedGold": [
+        "갑|을|압류·집행"
+      ],
+      "extraPred": [
+        "을|갑|압류·집행"
+      ]
+    }
+  ]
+}

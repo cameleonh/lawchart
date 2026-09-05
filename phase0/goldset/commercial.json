@@ -1,0 +1,130 @@
+[
+  {
+    "id": "com-001",
+    "domain": "commercial",
+    "difficulty": "basic",
+    "text": "갑은 2022. 4. 1. 을에게 약속어음 1,000만원을 발행하여 교부하였다. 을은 2022. 4. 20. 이 어음을 병에게 배서 양도하였다.",
+    "parties": ["갑", "을", "병"],
+    "objects": ["약속어음"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "약속어음 발행", "kind": "money", "date": "2022. 4. 1.", "obj": "약속어음" },
+      { "from": "을", "to": "병", "label": "배서양도", "kind": "contract", "date": "2022. 4. 20.", "obj": "약속어음" }
+    ],
+    "events": []
+  },
+  {
+    "id": "com-002",
+    "domain": "commercial",
+    "difficulty": "medium",
+    "text": "갑이 발행한 약속어음이 만기에 지급되지 않자, 병은 2022. 7. 1. 배서인 을에게 어음금의 지급을 청구하였다.",
+    "parties": ["갑", "을", "병"],
+    "objects": ["약속어음"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "약속어음 발행", "kind": "money", "date": null, "obj": "약속어음" },
+      { "from": "병", "to": "을", "label": "청구·제소", "kind": "dispute", "date": "2022. 7. 1.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "com-003",
+    "domain": "commercial",
+    "difficulty": "basic",
+    "text": "갑은 2021. 8. 8. 보유한 B주식회사의 주식 1,000주를 을에게 양도하였다.",
+    "parties": ["갑", "을", "B주식회사"],
+    "objects": ["주식"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "양도", "kind": "contract", "date": "2021. 8. 8.", "obj": "주식" }
+    ],
+    "events": []
+  },
+  {
+    "id": "com-004",
+    "domain": "commercial",
+    "difficulty": "basic",
+    "text": "갑은 2022. 3. 1. B주식회사의 신주 5,000주를 인수하였다.",
+    "parties": ["갑", "B주식회사"],
+    "objects": ["신주"],
+    "relations": [
+      { "from": "갑", "to": "B주식회사", "label": "신주 인수", "kind": "contract", "date": "2022. 3. 1.", "obj": "신주" }
+    ],
+    "events": []
+  },
+  {
+    "id": "com-005",
+    "domain": "commercial",
+    "difficulty": "medium",
+    "text": "갑, 을, 병은 2020. 1. 1. 각 1억원을 출자하여 D주식회사를 설립하였다.",
+    "parties": ["갑", "을", "병", "D주식회사"],
+    "objects": [],
+    "relations": [
+      { "from": "갑", "to": "D주식회사", "label": "출자", "kind": "contract", "date": "2020. 1. 1.", "obj": null },
+      { "from": "을", "to": "D주식회사", "label": "출자", "kind": "contract", "date": "2020. 1. 1.", "obj": null },
+      { "from": "병", "to": "D주식회사", "label": "출자", "kind": "contract", "date": "2020. 1. 1.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "com-006",
+    "domain": "commercial",
+    "difficulty": "medium",
+    "text": "대표이사 갑은 2021. 5. 1. 이사회의 승인 없이 자신이 대표하는 E주식회사와 매매계약을 체결하였다.",
+    "parties": ["갑", "E주식회사"],
+    "objects": [],
+    "relations": [
+      { "from": "갑", "to": "E주식회사", "label": "계약", "kind": "contract", "date": "2021. 5. 1.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "com-007",
+    "domain": "commercial",
+    "difficulty": "basic",
+    "text": "갑은 2020. 9. 9. 을과 자동차보험계약을 체결하였다. 사고가 발생하자 갑은 2021. 1. 15. 을에게 보험금 2천만원의 지급을 청구하였다.",
+    "parties": ["갑", "을"],
+    "objects": [],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "계약", "kind": "contract", "date": "2020. 9. 9.", "obj": null },
+      { "from": "갑", "to": "을", "label": "청구·제소", "kind": "dispute", "date": "2021. 1. 15.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "com-008",
+    "domain": "commercial",
+    "difficulty": "medium",
+    "text": "갑은 2022. 6. 1. 을에게서 화물의 운송을 위탁받아 운송하던 중 그 화물을 분실하였다. 을은 2022. 7. 1. 갑에게 손해배상을 청구하였다.",
+    "parties": ["갑", "을"],
+    "objects": ["화물"],
+    "relations": [
+      { "from": "을", "to": "갑", "label": "위임", "kind": "contract", "date": "2022. 6. 1.", "obj": "화물" },
+      { "from": "을", "to": "갑", "label": "손해배상 청구", "kind": "dispute", "date": "2022. 7. 1.", "obj": "화물" }
+    ],
+    "events": []
+  },
+  {
+    "id": "com-009",
+    "domain": "commercial",
+    "difficulty": "medium",
+    "text": "갑은 2021. 3. 1. 을에게 자신의 물품을 판매하도록 위탁하였다. 을은 2021. 3. 3. 병에게 그 물품을 500만원에 매도하였다.",
+    "parties": ["갑", "을", "병"],
+    "objects": ["물품"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "위임", "kind": "contract", "date": "2021. 3. 1.", "obj": "물품" },
+      { "from": "을", "to": "병", "label": "매도", "kind": "contract", "date": "2021. 3. 3.", "obj": "물품" }
+    ],
+    "events": []
+  },
+  {
+    "id": "com-010",
+    "domain": "commercial",
+    "difficulty": "medium",
+    "text": "갑은 2023. 2. 1. 을에게서 G물품 100박스를 5천만원에 매입하고 대금으로 약속어음을 발행하여 주었다.",
+    "parties": ["갑", "을"],
+    "objects": ["G물품", "약속어음"],
+    "relations": [
+      { "from": "을", "to": "갑", "label": "매도", "kind": "contract", "date": "2023. 2. 1.", "obj": "G물품" },
+      { "from": "갑", "to": "을", "label": "약속어음 발행", "kind": "money", "date": "2023. 2. 1.", "obj": "약속어음" }
+    ],
+    "events": []
+  }
+]

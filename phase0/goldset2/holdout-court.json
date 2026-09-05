@@ -1,0 +1,135 @@
+[
+  {
+    "id": "h-k31",
+    "domain": "civil",
+    "difficulty": "hard",
+    "text": "원고는 2018. 6. 20. 피고에게 금 8,000만원을 대여하였다. 피고는 같은 해 8. 20. 원고를 위하여 자신 소유 부동산에 근저당권을 설정하였다. 원고는 2020. 2. 20. 피고가 위 대여금의 이자를 지급하지 않자 2020. 3. 20. 피고를 상대로 대여금 반환을 구하는 소를 제기하였다.",
+    "parties": ["원고", "피고"],
+    "objects": ["부동산"],
+    "relations": [
+      { "from": "원고", "to": "피고", "label": "금전대여", "kind": "money", "date": "2018. 6. 20.", "obj": null },
+      { "from": "피고", "to": "원고", "label": "근저당권 설정", "kind": "security", "date": "2018. 8. 20.", "obj": "부동산" },
+      { "from": "원고", "to": "피고", "label": "청구·제소", "kind": "dispute", "date": "2020. 3. 20.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "h-k32",
+    "domain": "civil",
+    "difficulty": "hard",
+    "text": "피고는 2017. 4. 4. 원고 소유 L토지를 12억원에 매수하였고, 원고는 같은 날 위 토지에 관하여 피고 앞으로 소유권이전등기를 경료하였다. 피고는 대금 중 5억원을 지급한 후 나머지를 지급하지 아니하였다.",
+    "parties": ["원고", "피고"],
+    "objects": ["L토지"],
+    "relations": [
+      { "from": "원고", "to": "피고", "label": "매도", "kind": "contract", "date": "2017. 4. 4.", "obj": "L토지" },
+      { "from": "원고", "to": "피고", "label": "소유권이전등기", "kind": "contract", "date": "2017. 4. 4.", "obj": "L토지" },
+      { "from": "피고", "to": "원고", "label": "지급", "kind": "money", "date": null, "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "h-k33",
+    "domain": "civil",
+    "difficulty": "basic",
+    "text": "원고는 2019. 10. 10. 피고에게 M아파트를 보증금 4억원에 임대하였다. 원고는 2022. 1. 5. 임대료 연체를 이유로 피고에게 계약을 해지한다는 통지를 하였다.",
+    "parties": ["원고", "피고"],
+    "objects": ["M아파트"],
+    "relations": [
+      { "from": "원고", "to": "피고", "label": "임대", "kind": "contract", "date": "2019. 10. 10.", "obj": "M아파트" }
+    ],
+    "events": [
+      { "date": "2022. 1. 5.", "text": "원고 해지 통지" }
+    ]
+  },
+  {
+    "id": "h-k34",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "피고는 허위 사실을 적은 지로명세서를 제시하는 방법으로 원고를 기망하여 2020. 5. 5. 원고로부터 금 3,000만원을 교부받았다. 원고는 2020. 12. 5. 사기취소권을 행사하여 피고에게 위 금원의 반환을 청구하였다.",
+    "parties": ["원고", "피고"],
+    "objects": [],
+    "relations": [
+      { "from": "피고", "to": "원고", "label": "기망", "kind": "dispute", "date": "2020. 5. 5.", "obj": null },
+      { "from": "원고", "to": "피고", "label": "반환청구", "kind": "dispute", "date": "2020. 12. 5.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "h-k35",
+    "domain": "commercial",
+    "difficulty": "medium",
+    "text": "원고는 2021. 3. 1. 피고와 N차량 매매계약을 체결하여 대금 6천만원을 지급하였다. 그 후 같은 해 5. 1. 발생한 화재로 위 차량이 멸실되었다.",
+    "parties": ["원고", "피고"],
+    "objects": ["N차량"],
+    "relations": [
+      { "from": "원고", "to": "피고", "label": "계약", "kind": "contract", "date": "2021. 3. 1.", "obj": "N차량" },
+      { "from": "원고", "to": "피고", "label": "지급", "kind": "money", "date": "2021. 3. 1.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "h-k36",
+    "domain": "commercial",
+    "difficulty": "hard",
+    "text": "원고는 2022. 2. 22. 피고에게 O주식회사 주식 1만 주를 주당 5만원에 매도하기로 하였고, 피고는 같은 날 약속어음을 발행하여 대금을 지급하였다.",
+    "parties": ["원고", "피고", "O주식회사"],
+    "objects": ["주식", "약속어음"],
+    "relations": [
+      { "from": "원고", "to": "피고", "label": "매도", "kind": "contract", "date": "2022. 2. 22.", "obj": "주식" },
+      { "from": "피고", "to": "원고", "label": "약속어음 발행", "kind": "money", "date": "2022. 2. 22.", "obj": "약속어음" },
+      { "from": "피고", "to": "원고", "label": "지급", "kind": "money", "date": "2022. 2. 22.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "h-k37",
+    "domain": "commercial",
+    "difficulty": "hard",
+    "text": "원고는 피고가 2021. 8. 8. 발행한 약속어음 1,500만원을 만기에 제시하였으나 지급거절되었다. 원고는 2021. 11. 11. 피고에게 어음금의 지급을 청구하였다.",
+    "parties": ["원고", "피고"],
+    "objects": ["약속어음"],
+    "relations": [
+      { "from": "피고", "to": "원고", "label": "약속어음 발행", "kind": "money", "date": "2021. 8. 8.", "obj": "약속어음" },
+      { "from": "원고", "to": "피고", "label": "청구·제소", "kind": "dispute", "date": "2021. 11. 11.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "h-k38",
+    "domain": "criminal",
+    "difficulty": "hard",
+    "text": "피고인은 회사 자금 4억원을 보관하는 직책에 있으면서 2020. 4. 4. 유령 업체를 만들어 그 명의로 대금을 지급하는 방법으로 회사 자금을 횡령하였다.",
+    "parties": ["피고인", "회사"],
+    "objects": [],
+    "relations": [
+      { "from": "회사", "to": "피고인", "label": "보관위탁", "kind": "contract", "date": null, "obj": null },
+      { "from": "피고인", "to": "회사", "label": "횡령", "kind": "dispute", "date": "2020. 4. 4.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "h-k39",
+    "domain": "criminal",
+    "difficulty": "basic",
+    "text": "피고인은 이미 판매된 부동산을 자신 소유인 것처럼 속여 2021. 7. 7. 피해자에게서 계약금 5천만원을 편취하였다.",
+    "parties": ["피고인", "피해자"],
+    "objects": [],
+    "relations": [
+      { "from": "피고인", "to": "피해자", "label": "기망", "kind": "dispute", "date": "2021. 7. 7.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "h-k40",
+    "domain": "civil",
+    "difficulty": "medium",
+    "text": "망 甲은 생전 2018. 2. 2. 전 재산을 친구인 피고에게 유증하였다. 甲의 딸 원고는 2022. 6. 6. 피고에게 유류분반환청구를 하였다.",
+    "parties": ["甲", "피고", "원고"],
+    "objects": [],
+    "relations": [
+      { "from": "甲", "to": "피고", "label": "유증", "kind": "status", "date": "2018. 2. 2.", "obj": null },
+      { "from": "원고", "to": "피고", "label": "유류분반환청구", "kind": "dispute", "date": "2022. 6. 6.", "obj": null }
+    ],
+    "events": []
+  }
+]

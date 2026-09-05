@@ -1,0 +1,126 @@
+[
+  {
+    "id": "cri-001",
+    "domain": "criminal",
+    "difficulty": "basic",
+    "text": "갑은 2022. 5. 1. 허위 사실을 말하여 을을 속이고 3천만원을 편취하였다.",
+    "parties": ["갑", "을"],
+    "objects": [],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "기망", "kind": "dispute", "date": "2022. 5. 1.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "cri-002",
+    "domain": "criminal",
+    "difficulty": "basic",
+    "text": "을은 2021. 7. 7. 갑의 지갑을 몰래 훔쳤다.",
+    "parties": ["갑", "을"],
+    "objects": ["지갑"],
+    "relations": [
+      { "from": "을", "to": "갑", "label": "절취", "kind": "dispute", "date": "2021. 7. 7.", "obj": "지갑" }
+    ],
+    "events": []
+  },
+  {
+    "id": "cri-003",
+    "domain": "criminal",
+    "difficulty": "basic",
+    "text": "병은 2020. 11. 1. 을을 협박하여 을이 들고 있던 갑의 물건을 강제로 빼앗았다.",
+    "parties": ["갑", "을", "병"],
+    "objects": ["물건"],
+    "relations": [
+      { "from": "병", "to": "을", "label": "강박", "kind": "dispute", "date": "2020. 11. 1.", "obj": null },
+      { "from": "병", "to": "갑", "label": "강취", "kind": "dispute", "date": "2020. 11. 1.", "obj": "물건" }
+    ],
+    "events": []
+  },
+  {
+    "id": "cri-004",
+    "domain": "criminal",
+    "difficulty": "medium",
+    "text": "갑은 2022. 8. 8. 을로부터 보관을 위탁받은 금 1억원을 임무에 위배하여 소비하였다.",
+    "parties": ["갑", "을"],
+    "objects": [],
+    "relations": [
+      { "from": "을", "to": "갑", "label": "보관위탁", "kind": "contract", "date": "2022. 8. 8.", "obj": null },
+      { "from": "갑", "to": "을", "label": "횡령", "kind": "dispute", "date": "2022. 8. 8.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "cri-005",
+    "domain": "criminal",
+    "difficulty": "medium",
+    "text": "을은 2023. 1. 1. 갑으로부터 부동산 관리를 위탁받고도 갑의 승낙 없이 그 부동산을 자신의 채권자 병에게 담보로 제공하였다.",
+    "parties": ["갑", "을", "병"],
+    "objects": ["부동산"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "위임", "kind": "contract", "date": "2023. 1. 1.", "obj": "부동산" },
+      { "from": "을", "to": "병", "label": "담보 제공", "kind": "security", "date": "2023. 1. 1.", "obj": "부동산" },
+      { "from": "을", "to": "갑", "label": "배임", "kind": "dispute", "date": "2023. 1. 1.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "cri-006",
+    "domain": "criminal",
+    "difficulty": "basic",
+    "text": "갑은 2022. 12. 25. 술에 취해 을을 때려 상해를 입혔다.",
+    "parties": ["갑", "을"],
+    "objects": [],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "폭행·상해", "kind": "dispute", "date": "2022. 12. 25.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "cri-007",
+    "domain": "criminal",
+    "difficulty": "basic",
+    "text": "병은 2021. 4. 1. 흉기로 갑을 살해하였다.",
+    "parties": ["갑", "병"],
+    "objects": [],
+    "relations": [
+      { "from": "병", "to": "갑", "label": "살해", "kind": "dispute", "date": "2021. 4. 1.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "cri-008",
+    "domain": "criminal",
+    "difficulty": "basic",
+    "text": "을은 여러 차례 갑에게 전화를 하여 금품을 요구하며 협박하였다.",
+    "parties": ["갑", "을"],
+    "objects": [],
+    "relations": [
+      { "from": "을", "to": "갑", "label": "강박", "kind": "dispute", "date": null, "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "cri-009",
+    "domain": "criminal",
+    "difficulty": "medium",
+    "text": "갑은 2020. 6. 1. 을의 인장을 위조하여 문서를 작성하고 이를 행사하였다.",
+    "parties": ["갑", "을"],
+    "objects": [],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "문서위조", "kind": "dispute", "date": "2020. 6. 1.", "obj": null }
+    ],
+    "events": []
+  },
+  {
+    "id": "cri-010",
+    "domain": "criminal",
+    "difficulty": "hard",
+    "text": "을은 2022. 9. 1. 길에서 주운 갑의 지갑에 있던 현금을 꺼내 자신의 것처럼 가졌다.",
+    "parties": ["갑", "을"],
+    "objects": ["지갑"],
+    "relations": [
+      { "from": "을", "to": "갑", "label": "점유이탈물횡령", "kind": "dispute", "date": "2022. 9. 1.", "obj": "지갑" }
+    ],
+    "events": []
+  }
+]

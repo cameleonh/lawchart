@@ -1,0 +1,133 @@
+[
+  {
+    "id": "pro-001",
+    "domain": "procedural",
+    "difficulty": "basic",
+    "text": "갑은 2023. 3. 1. 을을 상대로 대금 지급을 구하는 소를 제기하였다. 법원은 2023. 11. 20. 갑에게 승소 판결을 선고하였다.",
+    "parties": ["갑", "을"],
+    "objects": [],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "청구·제소", "kind": "dispute", "date": "2023. 3. 1.", "obj": null }
+    ],
+    "events": [
+      { "date": "2023. 11. 20.", "text": "1심 판결 선고" }
+    ]
+  },
+  {
+    "id": "pro-002",
+    "domain": "procedural",
+    "difficulty": "basic",
+    "text": "갑은 2022. 6. 1. 을에 대한 채권을 보전하기 위하여 을 소유 부동산에 관하여 법원으로부터 가압류결정을 받았다.",
+    "parties": ["갑", "을"],
+    "objects": ["부동산"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "가압류", "kind": "dispute", "date": "2022. 6. 1.", "obj": "부동산" }
+    ],
+    "events": []
+  },
+  {
+    "id": "pro-003",
+    "domain": "procedural",
+    "difficulty": "basic",
+    "text": "을은 2023. 1. 1. 병 소유 건물의 처분금지 가처분신청을 하여 법원으로부터 결정을 받았다.",
+    "parties": ["을", "병"],
+    "objects": ["건물"],
+    "relations": [
+      { "from": "을", "to": "병", "label": "가처분", "kind": "dispute", "date": "2023. 1. 1.", "obj": "건물" }
+    ],
+    "events": []
+  },
+  {
+    "id": "pro-004",
+    "domain": "procedural",
+    "difficulty": "medium",
+    "text": "갑은 2021. 9. 1. 승소 판결을 근거로 을 소유의 H주택에 대한 강제경매를 신청하였다.",
+    "parties": ["갑", "을"],
+    "objects": ["H주택"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "압류·집행", "kind": "dispute", "date": "2021. 9. 1.", "obj": "H주택" }
+    ],
+    "events": []
+  },
+  {
+    "id": "pro-005",
+    "domain": "procedural",
+    "difficulty": "medium",
+    "text": "갑은 2022. 7. 1. 을을 상대로 소를 제기하였으나 을의 소재가 불명하여 2022. 8. 1. 공시송달을 신청하였다.",
+    "parties": ["갑", "을"],
+    "objects": [],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "청구·제소", "kind": "dispute", "date": "2022. 7. 1.", "obj": null }
+    ],
+    "events": [
+      { "date": "2022. 8. 1.", "text": "공시송달 신청" }
+    ]
+  },
+  {
+    "id": "pro-006",
+    "domain": "procedural",
+    "difficulty": "medium",
+    "text": "갑이 을을 상대로 제기한 사건에서 1심 법원은 2023. 12. 1. 판결을 선고하였다. 을은 2024. 1. 15. 이에 불복하여 항소를 제기하였다.",
+    "parties": ["갑", "을"],
+    "objects": [],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "청구·제소", "kind": "dispute", "date": null, "obj": null }
+    ],
+    "events": [
+      { "date": "2023. 12. 1.", "text": "1심 판결 선고" },
+      { "date": "2024. 1. 15.", "text": "을 항소 제기" }
+    ]
+  },
+  {
+    "id": "pro-007",
+    "domain": "procedural",
+    "difficulty": "basic",
+    "text": "갑은 2022. 2. 1. 을을 상대로 소를 제기하였다가 2023. 5. 5. 소를 취하하였다.",
+    "parties": ["갑", "을"],
+    "objects": [],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "청구·제소", "kind": "dispute", "date": "2022. 2. 1.", "obj": null }
+    ],
+    "events": [
+      { "date": "2023. 5. 5.", "text": "소 취하" }
+    ]
+  },
+  {
+    "id": "pro-008",
+    "domain": "procedural",
+    "difficulty": "basic",
+    "text": "갑과 을은 2023. 7. 1. 법원에 조정신청을 하여 조정조서가 작성되었다.",
+    "parties": ["갑", "을"],
+    "objects": [],
+    "relations": [],
+    "events": [
+      { "date": "2023. 7. 1.", "text": "조정절차 성립" }
+    ]
+  },
+  {
+    "id": "pro-009",
+    "domain": "procedural",
+    "difficulty": "medium",
+    "text": "갑은 2020. 4. 1. 을에 대한 판결의 집행문을 부여받아 을의 예금 채권에 대하여 압류 및 추심 명령을 받았다.",
+    "parties": ["갑", "을"],
+    "objects": ["예금"],
+    "relations": [
+      { "from": "갑", "to": "을", "label": "압류·집행", "kind": "dispute", "date": "2020. 4. 1.", "obj": "예금" }
+    ],
+    "events": []
+  },
+  {
+    "id": "pro-010",
+    "domain": "procedural",
+    "difficulty": "medium",
+    "text": "갑은 2021. 2. 1. 을 소유 I토지에 관하여 근저당권을 설정받았다. 을이 빌린 5억원을 변제하지 않자 갑은 2022. 2. 1. 그 토지에 대한 경매를 신청하였다.",
+    "parties": ["갑", "을"],
+    "objects": ["I토지"],
+    "relations": [
+      { "from": "을", "to": "갑", "label": "근저당권 설정", "kind": "security", "date": "2021. 2. 1.", "obj": "I토지" },
+      { "from": "갑", "to": "을", "label": "금전대여", "kind": "money", "date": "2021. 2. 1.", "obj": null },
+      { "from": "갑", "to": "을", "label": "압류·집행", "kind": "dispute", "date": "2022. 2. 1.", "obj": "I토지" }
+    ],
+    "events": []
+  }
+]
