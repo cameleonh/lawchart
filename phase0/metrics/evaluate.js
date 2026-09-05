@@ -74,6 +74,7 @@ async function predictLawchart(c) {
 }
 
 let aiMod = null;
+let aiThrottle = Promise.resolve();
 async function predictAI(c) {
   if (!aiMod) {
     aiMod = await import(require('url').pathToFileURL(path.join(__dirname, '..', '..', 'app', 'src', 'ai.js')).href);
@@ -83,11 +84,17 @@ async function predictAI(c) {
     apiKey: process.env.LAWCHART_AI_KEY || '',
     model: process.env.LAWCHART_AI_MODEL || 'gpt-4o-mini',
   };
-  const out = await aiMod.parseWithAI(c.text, cfg);
-  if (!out) throw new Error('AI 응답 없음(키/네트워크/계약 위반) — id=' + c.id);
+  // 순차 실행 + 300ms 간격(요청 폭주 방지)
+  const run = aiThrottle.then(async () => {
+    const out = await aiMod.parseWithAI(c.text, cfg);
+    if (!out) console.error('  [AI 응답 실패로 공란 처리]', c.id);
+    await new Promise(r => setTimeout(r, 300));
+    return out || { parties: [], relations: [], events: [], objects: [] };
+  });
+  aiThrottle = run.catch(() => {});
   return {
-    parties: out.parties || [],
-    relations: (out.relations || [])
+    parties: (await run).parties || [],
+    relations: ((await run).relations || [])
       .filter(r => r.from !== r.to)
       .map(r => ({ from: r.from, to: r.to, base: baseLabel(r.label), date: r.date || null, obj: r.obj || objFromLabel(r.label) })),
   };

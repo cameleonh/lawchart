@@ -55,6 +55,17 @@ td b{color:var(--indigo)}
   <h2>법역별</h2>
   <div class="cards"><div class="card"><div class="dom">민법</div><div class="big">98.4%</div><div class="sub">관계 F1 · 당사자 100.0%</div></div><div class="card"><div class="dom">상법</div><div class="big">95.1%</div><div class="sub">관계 F1 · 당사자 99.1%</div></div><div class="card"><div class="dom">형사</div><div class="big">96.2%</div><div class="sub">관계 F1 · 당사자 98.7%</div></div><div class="card"><div class="dom">민사소송법</div><div class="big">94.4%</div><div class="sub">관계 F1 · 당사자 100.0%</div></div></div>
 
+  
+  <h2>AI 보조 경로(옵션·자기 키 사용)</h2>
+  <table>
+    <tr><th>지표</th><th>규칙 파서(기본)</th><th>AI 경로(GLM-5, 옵트인)</th></tr>
+    <tr><td>관계 F1(엄격)</td><td><b>96.9%</b></td><td>91.2%</td></tr>
+    <tr><td>당사자 F1</td><td>99.6%</td><td>99.1%</td></tr>
+    <tr><td>날짜 정확도</td><td>92.4%</td><td>87.7%</td></tr>
+  </table>
+  <div class="note" style="margin-top:10px">AI 경로는 사용자의 API 키로 브라우저에서 직접 호출하는 옵션입니다. 실패 시 규칙 파서로 자동 폴백하며, 기본값은 꺼져 있습니다.</div>
+  
+
   <h2>측정 방법</h2>
   <table>
     <tr><th>항목</th><th>내용</th></tr>

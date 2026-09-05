@@ -12,6 +12,8 @@ const read = f => JSON.parse(fs.readFileSync(path.join(REP, f), 'utf8'));
 const lawAll = read('p2_all_lawchart.json');      // 전체 100건
 const lawHold = read('p2_holdout_lawchart.json');  // 홀드아웃 40건(2차)
 const orig = read('p2_holdout_original.json');    // 원본 기준선(홀드아웃 40건)
+const hasAI = fs.existsSync(path.join(REP, 'p2_all_ai.json'));
+const aiAll = hasAI ? read('p2_all_ai.json') : null; // AI 경로(옵트인·BYOK)
 const pct = x => (x * 100).toFixed(1) + '%';
 
 const domains = { civil: '민법', commercial: '상법', criminal: '형사', procedural: '민사소송법' };
@@ -74,6 +76,17 @@ td b{color:var(--indigo)}
 
   <h2>법역별</h2>
   <div class="cards">${domRows}</div>
+
+  ${hasAI ? `
+  <h2>AI 보조 경로(옵션·자기 키 사용)</h2>
+  <table>
+    <tr><th>지표</th><th>규칙 파서(기본)</th><th>AI 경로(GLM-5, 옵트인)</th></tr>
+    <tr><td>관계 F1(엄격)</td><td><b>${pct(lawAll.overall.relStrict.f1)}</b></td><td>${pct(aiAll.overall.relStrict.f1)}</td></tr>
+    <tr><td>당사자 F1</td><td>${pct(lawAll.overall.parties.f1)}</td><td>${pct(aiAll.overall.parties.f1)}</td></tr>
+    <tr><td>날짜 정확도</td><td>${pct(lawAll.dateAccuracy.rate)}</td><td>${pct(aiAll.dateAccuracy.rate)}</td></tr>
+  </table>
+  <div class="note" style="margin-top:10px">AI 경로는 사용자의 API 키로 브라우저에서 직접 호출하는 옵션입니다. 실패 시 규칙 파서로 자동 폴백하며, 기본값은 꺼져 있습니다.</div>
+  ` : ''}
 
   <h2>측정 방법</h2>
   <table>

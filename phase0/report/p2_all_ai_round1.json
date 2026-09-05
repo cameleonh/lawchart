@@ -1,0 +1,1195 @@
+{
+  "meta": {
+    "cases": 100,
+    "parser": "original plot parseFacts (baseline)",
+    "date": "2026-09-05T07:13:06.317Z"
+  },
+  "overall": {
+    "parties": {
+      "precision": 0.9956,
+      "recall": 0.987,
+      "f1": 0.9913
+    },
+    "relStrict": {
+      "precision": 0.9071,
+      "recall": 0.9171,
+      "f1": 0.9121
+    },
+    "relDirless": {
+      "precision": 0.9126,
+      "recall": 0.9227,
+      "f1": 0.9176
+    },
+    "relPair": {
+      "precision": 0.9524,
+      "recall": 0.9677,
+      "f1": 0.96
+    },
+    "objects": {
+      "precision": 0.5732,
+      "recall": 0.7581,
+      "f1": 0.6528
+    }
+  },
+  "dateAccuracy": {
+    "hit": 150,
+    "total": 171,
+    "rate": 0.8772
+  },
+  "byDomain": {
+    "civil": {
+      "parties": {
+        "precision": 0.9906,
+        "recall": 0.9906,
+        "f1": 0.9906
+      },
+      "relStrict": {
+        "precision": 0.9091,
+        "recall": 0.9474,
+        "f1": 0.9278
+      },
+      "relDirless": {
+        "precision": 0.9192,
+        "recall": 0.9579,
+        "f1": 0.9381
+      },
+      "relPair": {
+        "precision": 0.9206,
+        "recall": 0.9831,
+        "f1": 0.9508
+      },
+      "objects": {
+        "precision": 0.7317,
+        "recall": 0.9677,
+        "f1": 0.8333
+      }
+    },
+    "commercial": {
+      "parties": {
+        "precision": 1,
+        "recall": 0.9623,
+        "f1": 0.9808
+      },
+      "relStrict": {
+        "precision": 0.9268,
+        "recall": 0.9268,
+        "f1": 0.9268
+      },
+      "relDirless": {
+        "precision": 0.9268,
+        "recall": 0.9268,
+        "f1": 0.9268
+      },
+      "relPair": {
+        "precision": 1,
+        "recall": 0.9655,
+        "f1": 0.9825
+      },
+      "objects": {
+        "precision": 0.4783,
+        "recall": 0.5789,
+        "f1": 0.5238
+      }
+    },
+    "criminal": {
+      "parties": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relStrict": {
+        "precision": 0.84,
+        "recall": 0.7778,
+        "f1": 0.8077
+      },
+      "relDirless": {
+        "precision": 0.84,
+        "recall": 0.7778,
+        "f1": 0.8077
+      },
+      "relPair": {
+        "precision": 0.95,
+        "recall": 0.9048,
+        "f1": 0.9268
+      },
+      "objects": {
+        "precision": 0.1818,
+        "recall": 0.4,
+        "f1": 0.25
+      }
+    },
+    "procedural": {
+      "parties": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relStrict": {
+        "precision": 0.9444,
+        "recall": 0.9444,
+        "f1": 0.9444
+      },
+      "relDirless": {
+        "precision": 0.9444,
+        "recall": 0.9444,
+        "f1": 0.9444
+      },
+      "relPair": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "objects": {
+        "precision": 0.5714,
+        "recall": 0.5714,
+        "f1": 0.5714
+      }
+    }
+  },
+  "byDifficulty": {
+    "basic": {
+      "parties": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "relStrict": {
+        "precision": 0.9773,
+        "recall": 0.9556,
+        "f1": 0.9663
+      },
+      "relDirless": {
+        "precision": 0.9773,
+        "recall": 0.9556,
+        "f1": 0.9663
+      },
+      "relPair": {
+        "precision": 1,
+        "recall": 0.973,
+        "f1": 0.9863
+      },
+      "objects": {
+        "precision": 0.5714,
+        "recall": 0.6667,
+        "f1": 0.6154
+      }
+    },
+    "medium": {
+      "parties": {
+        "precision": 1,
+        "recall": 0.9915,
+        "f1": 0.9957
+      },
+      "relStrict": {
+        "precision": 0.8922,
+        "recall": 0.9381,
+        "f1": 0.9146
+      },
+      "relDirless": {
+        "precision": 0.8922,
+        "recall": 0.9381,
+        "f1": 0.9146
+      },
+      "relPair": {
+        "precision": 0.9412,
+        "recall": 0.9846,
+        "f1": 0.9624
+      },
+      "objects": {
+        "precision": 0.625,
+        "recall": 0.8065,
+        "f1": 0.7042
+      }
+    },
+    "hard": {
+      "parties": {
+        "precision": 0.9744,
+        "recall": 0.95,
+        "f1": 0.962
+      },
+      "relStrict": {
+        "precision": 0.8649,
+        "recall": 0.8205,
+        "f1": 0.8421
+      },
+      "relDirless": {
+        "precision": 0.8919,
+        "recall": 0.8462,
+        "f1": 0.8684
+      },
+      "relPair": {
+        "precision": 0.9091,
+        "recall": 0.9091,
+        "f1": 0.9091
+      },
+      "objects": {
+        "precision": 0.4762,
+        "recall": 0.7692,
+        "f1": 0.5882
+      }
+    }
+  },
+  "perCase": [
+    {
+      "id": "civil-001",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-002",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-003",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-004",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-005",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-006",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.75,
+      "missedGold": [
+        "丙|丁|전매"
+      ],
+      "extraPred": [
+        "丙|丁|매도"
+      ]
+    },
+    {
+      "id": "civil-007",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-008",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-009",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-010",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.6667,
+      "missedGold": [],
+      "extraPred": [
+        "갑|을|매도"
+      ]
+    },
+    {
+      "id": "civil-011",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-012",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-013",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-014",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 0.8,
+      "missedGold": [
+        "을|갑|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "civil-015",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-016",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-017",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-018",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.6667,
+      "missedGold": [],
+      "extraPred": [
+        "병|갑|대리"
+      ]
+    },
+    {
+      "id": "civil-019",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-020",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-021",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-022",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-023",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-024",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-025",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-026",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.8,
+      "missedGold": [],
+      "extraPred": [
+        "갑|병|상속"
+      ]
+    },
+    {
+      "id": "civil-027",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 0.5,
+      "missedGold": [
+        "갑|을|계약"
+      ],
+      "extraPred": [
+        "갑|을|매도"
+      ]
+    },
+    {
+      "id": "civil-028",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-029",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.8,
+      "missedGold": [],
+      "extraPred": [
+        "갑|을|점유"
+      ]
+    },
+    {
+      "id": "civil-030",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-001",
+      "domain": "commercial",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-002",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.6667,
+      "missedGold": [
+        "갑|을|약속어음 발행"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "com-003",
+      "domain": "commercial",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-004",
+      "domain": "commercial",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-005",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-006",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.6667,
+      "missedGold": [],
+      "extraPred": [
+        "E주식회사|갑|대리"
+      ]
+    },
+    {
+      "id": "com-007",
+      "domain": "commercial",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-008",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-009",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-010",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-001",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-002",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-003",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 0,
+      "missedGold": [
+        "병|을|강박",
+        "병|갑|강취"
+      ],
+      "extraPred": [
+        "병|을|강취"
+      ]
+    },
+    {
+      "id": "cri-004",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-005",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.8,
+      "missedGold": [
+        "을|갑|배임"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "cri-006",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-007",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-008",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-009",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "cri-010",
+      "domain": "criminal",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-001",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-002",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-003",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-004",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-005",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-006",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-007",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-008",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 0,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-009",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-010",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.8,
+      "missedGold": [
+        "갑|을|압류·집행"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c01",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c02",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c03",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c04",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c05",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c06",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c07",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c08",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c09",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0.6667,
+      "strictF1": 0.5,
+      "missedGold": [
+        "을|갑|전세권 설정",
+        "채권자|갑|압류·집행"
+      ],
+      "extraPred": [
+        "갑|을|전세권 설정",
+        "갑의 채권자|갑|압류·집행"
+      ]
+    },
+    {
+      "id": "h-c10",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c11",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c12",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 0.8,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c13",
+      "domain": "commercial",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c14",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.8,
+      "missedGold": [],
+      "extraPred": [
+        "을|갑보험회사|지급"
+      ]
+    },
+    {
+      "id": "h-c15",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c16",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c17",
+      "domain": "commercial",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c18",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c19",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.6667,
+      "missedGold": [],
+      "extraPred": [
+        "피해자|피고인|지급"
+      ]
+    },
+    {
+      "id": "h-c20",
+      "domain": "criminal",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 0.5,
+      "missedGold": [
+        "병|을|장물취득"
+      ],
+      "extraPred": [
+        "병|갑|장물취득"
+      ]
+    },
+    {
+      "id": "h-c21",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c22",
+      "domain": "criminal",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 0.5,
+      "missedGold": [
+        "을|갑|배임"
+      ],
+      "extraPred": [
+        "을|갑|횡령"
+      ]
+    },
+    {
+      "id": "h-c23",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c24",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.6667,
+      "missedGold": [
+        "병|갑|강박"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c25",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.8,
+      "missedGold": [],
+      "extraPred": [
+        "갑|을|매도"
+      ]
+    },
+    {
+      "id": "h-c26",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c27",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c28",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c29",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-c30",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-k31",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-k32",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-k33",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-k34",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.8,
+      "missedGold": [],
+      "extraPred": [
+        "원고|피고|지급"
+      ]
+    },
+    {
+      "id": "h-k35",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.5,
+      "missedGold": [
+        "원고|피고|계약"
+      ],
+      "extraPred": [
+        "피고|원고|매도"
+      ]
+    },
+    {
+      "id": "h-k36",
+      "domain": "commercial",
+      "difficulty": "hard",
+      "partiesF1": 0.8,
+      "strictF1": 0.8,
+      "missedGold": [
+        "피고|원고|지급"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-k37",
+      "domain": "commercial",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-k38",
+      "domain": "criminal",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-k39",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "h-k40",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    }
+  ]
+}

@@ -1,0 +1,1343 @@
+{
+  "meta": {
+    "cases": 100,
+    "parser": "original plot parseFacts (baseline)",
+    "date": "2026-09-05T07:26:18.213Z"
+  },
+  "overall": {
+    "parties": {
+      "precision": 1,
+      "recall": 0.3043,
+      "f1": 0.4667
+    },
+    "relStrict": {
+      "precision": 0.9123,
+      "recall": 0.2873,
+      "f1": 0.437
+    },
+    "relDirless": {
+      "precision": 0.9298,
+      "recall": 0.2928,
+      "f1": 0.4454
+    },
+    "relPair": {
+      "precision": 0.9524,
+      "recall": 0.3226,
+      "f1": 0.4819
+    },
+    "objects": {
+      "precision": 0.8,
+      "recall": 0.3226,
+      "f1": 0.4598
+    }
+  },
+  "dateAccuracy": {
+    "hit": 50,
+    "total": 171,
+    "rate": 0.2924
+  },
+  "byDomain": {
+    "civil": {
+      "parties": {
+        "precision": 1,
+        "recall": 0.5094,
+        "f1": 0.675
+      },
+      "relStrict": {
+        "precision": 0.913,
+        "recall": 0.4421,
+        "f1": 0.5957
+      },
+      "relDirless": {
+        "precision": 0.9348,
+        "recall": 0.4526,
+        "f1": 0.6099
+      },
+      "relPair": {
+        "precision": 0.9375,
+        "recall": 0.5085,
+        "f1": 0.6593
+      },
+      "objects": {
+        "precision": 0.8571,
+        "recall": 0.5806,
+        "f1": 0.6923
+      }
+    },
+    "commercial": {
+      "parties": {
+        "precision": 1,
+        "recall": 0.3019,
+        "f1": 0.4638
+      },
+      "relStrict": {
+        "precision": 0.9091,
+        "recall": 0.2439,
+        "f1": 0.3846
+      },
+      "relDirless": {
+        "precision": 0.9091,
+        "recall": 0.2439,
+        "f1": 0.3846
+      },
+      "relPair": {
+        "precision": 1,
+        "recall": 0.3448,
+        "f1": 0.5128
+      },
+      "objects": {
+        "precision": 0.5,
+        "recall": 0.1053,
+        "f1": 0.1739
+      }
+    },
+    "criminal": {
+      "parties": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "relStrict": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "relDirless": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "relPair": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "objects": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      }
+    },
+    "procedural": {
+      "parties": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "relStrict": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "relDirless": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "relPair": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "objects": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      }
+    }
+  },
+  "byDifficulty": {
+    "basic": {
+      "parties": {
+        "precision": 1,
+        "recall": 0.3836,
+        "f1": 0.5545
+      },
+      "relStrict": {
+        "precision": 1,
+        "recall": 0.4444,
+        "f1": 0.6154
+      },
+      "relDirless": {
+        "precision": 1,
+        "recall": 0.4444,
+        "f1": 0.6154
+      },
+      "relPair": {
+        "precision": 1,
+        "recall": 0.4054,
+        "f1": 0.5769
+      },
+      "objects": {
+        "precision": 0.8182,
+        "recall": 0.5,
+        "f1": 0.6207
+      }
+    },
+    "medium": {
+      "parties": {
+        "precision": 1,
+        "recall": 0.3419,
+        "f1": 0.5096
+      },
+      "relStrict": {
+        "precision": 0.9118,
+        "recall": 0.3196,
+        "f1": 0.4733
+      },
+      "relDirless": {
+        "precision": 0.9118,
+        "recall": 0.3196,
+        "f1": 0.4733
+      },
+      "relPair": {
+        "precision": 0.9231,
+        "recall": 0.3692,
+        "f1": 0.5275
+      },
+      "objects": {
+        "precision": 0.7692,
+        "recall": 0.3226,
+        "f1": 0.4545
+      }
+    },
+    "hard": {
+      "parties": {
+        "precision": 1,
+        "recall": 0.05,
+        "f1": 0.0952
+      },
+      "relStrict": {
+        "precision": 0.3333,
+        "recall": 0.0256,
+        "f1": 0.0476
+      },
+      "relDirless": {
+        "precision": 0.6667,
+        "recall": 0.0513,
+        "f1": 0.0952
+      },
+      "relPair": {
+        "precision": 1,
+        "recall": 0.0455,
+        "f1": 0.087
+      },
+      "objects": {
+        "precision": 1,
+        "recall": 0.0769,
+        "f1": 0.1429
+      }
+    }
+  },
+  "perCase": [
+    {
+      "id": "civil-001",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-002",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-003",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-004",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-005",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-006",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-007",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-008",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-009",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-010",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.6667,
+      "missedGold": [],
+      "extraPred": [
+        "갑|을|매도"
+      ]
+    },
+    {
+      "id": "civil-011",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-012",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-013",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-014",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 1,
+      "strictF1": 0.3333,
+      "missedGold": [
+        "갑|을|위임",
+        "을|갑|유치권"
+      ],
+      "extraPred": [
+        "갑|을|도급",
+        "갑|을|유치권"
+      ]
+    },
+    {
+      "id": "civil-015",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-016",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-017",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-018",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.6667,
+      "missedGold": [],
+      "extraPred": [
+        "병|갑|대리"
+      ]
+    },
+    {
+      "id": "civil-019",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-020",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-021",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-022",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "civil-023",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|대리",
+        "갑|병|매도"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "civil-024",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|혼인",
+        "갑|을|이혼"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "civil-025",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "병|丁|입양"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "civil-026",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|유증",
+        "병|을|유류분반환청구"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "civil-027",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|계약",
+        "갑|을|가등기 설정"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "civil-028",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|매도"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "civil-029",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|병|매도",
+        "갑|병|소유권이전등기"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "civil-030",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-001",
+      "domain": "commercial",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-002",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 0.8,
+      "missedGold": [],
+      "extraPred": [
+        "을|병|배서양도"
+      ]
+    },
+    {
+      "id": "com-003",
+      "domain": "commercial",
+      "difficulty": "basic",
+      "partiesF1": 0.8,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-004",
+      "domain": "commercial",
+      "difficulty": "basic",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-005",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-006",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "com-007",
+      "domain": "commercial",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|계약",
+        "갑|을|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "com-008",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|갑|위임",
+        "을|갑|손해배상 청구"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "com-009",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|위임",
+        "을|병|매도"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "com-010",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|갑|매도",
+        "갑|을|약속어음 발행"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "cri-001",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|기망"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "cri-002",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|갑|절취"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "cri-003",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "병|을|강박",
+        "병|갑|강취"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "cri-004",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|갑|보관위탁",
+        "갑|을|횡령"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "cri-005",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|위임",
+        "을|병|담보 제공",
+        "을|갑|배임"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "cri-006",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|폭행·상해"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "cri-007",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "병|갑|살해"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "cri-008",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|갑|강박"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "cri-009",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|문서위조"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "cri-010",
+      "domain": "criminal",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|갑|점유이탈물횡령"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "pro-001",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "pro-002",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|가압류"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "pro-003",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|병|가처분"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "pro-004",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|압류·집행"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "pro-005",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "pro-006",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "pro-007",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "pro-008",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [],
+      "extraPred": []
+    },
+    {
+      "id": "pro-009",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|압류·집행"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "pro-010",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|갑|근저당권 설정",
+        "갑|을|금전대여",
+        "갑|을|압류·집행"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c01",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "김철수|이영희|매도",
+        "이영희|김철수|지급",
+        "김철수|이영희|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c02",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "박민준|최수진|임대",
+        "최수진|정하늘|전대",
+        "박민준|최수진|반환청구"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c03",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|갑|금전대여",
+        "병|을|보증",
+        "갑|을|공탁"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c04",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|갑|기망",
+        "갑|을|금전대여",
+        "갑|을|반환청구"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c05",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "A|B|상속",
+        "C|B|유류분반환청구"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c06",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을건설|도급",
+        "을건설|갑|손해배상 청구"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c07",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|금전대여",
+        "을|갑|질권 설정",
+        "을|갑|변제"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c08",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "병|갑|점유",
+        "갑|병|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c09",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|임대",
+        "을|갑|전세권 설정",
+        "채권자|갑|압류·집행",
+        "을|갑|반환청구"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c10",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "甲|乙|혼인",
+        "甲|乙|이혼",
+        "乙|甲|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c11",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑상사|을|약속어음 발행",
+        "을|갑상사|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c12",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|양도"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c13",
+      "domain": "commercial",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|D주식회사|매도"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c14",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|갑보험회사|계약",
+        "을|갑보험회사|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c15",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|병|위임",
+        "병|갑|횡령",
+        "갑|병|손해배상 청구"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c16",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|F유한회사|출자",
+        "병|F유한회사|출자",
+        "정|F유한회사|출자"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c17",
+      "domain": "commercial",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|약속어음 발행",
+        "을|병|배서양도"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c18",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|G운송주식회사|위임",
+        "을|G운송주식회사|손해배상 청구"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c19",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "피고인|피해자|기망"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c20",
+      "domain": "criminal",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|갑|절취",
+        "병|을|장물취득"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c21",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "회사|피고인|보관위탁",
+        "피고인|회사|횡령"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c22",
+      "domain": "criminal",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|위임",
+        "을|갑|배임"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c23",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|폭행·상해"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c24",
+      "domain": "criminal",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "병|갑|강박",
+        "병|갑|강취"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c25",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|청구·제소",
+        "갑|을|압류·집행"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c26",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "을|갑|가압류"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c27",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c28",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c29",
+      "domain": "procedural",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-c30",
+      "domain": "procedural",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "갑|을|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-k31",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "원고|피고|금전대여",
+        "피고|원고|근저당권 설정",
+        "원고|피고|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-k32",
+      "domain": "civil",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "원고|피고|매도",
+        "원고|피고|소유권이전등기",
+        "피고|원고|지급"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-k33",
+      "domain": "civil",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "원고|피고|임대"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-k34",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "피고|원고|기망",
+        "원고|피고|반환청구"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-k35",
+      "domain": "commercial",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "원고|피고|계약",
+        "원고|피고|지급"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-k36",
+      "domain": "commercial",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "원고|피고|매도",
+        "피고|원고|약속어음 발행",
+        "피고|원고|지급"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-k37",
+      "domain": "commercial",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "피고|원고|약속어음 발행",
+        "원고|피고|청구·제소"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-k38",
+      "domain": "criminal",
+      "difficulty": "hard",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "회사|피고인|보관위탁",
+        "피고인|회사|횡령"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-k39",
+      "domain": "criminal",
+      "difficulty": "basic",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "피고인|피해자|기망"
+      ],
+      "extraPred": []
+    },
+    {
+      "id": "h-k40",
+      "domain": "civil",
+      "difficulty": "medium",
+      "partiesF1": 0,
+      "strictF1": 0,
+      "missedGold": [
+        "甲|피고|유증",
+        "원고|피고|유류분반환청구"
+      ],
+      "extraPred": []
+    }
+  ]
+}
