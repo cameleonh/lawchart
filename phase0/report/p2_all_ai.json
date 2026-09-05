@@ -2,66 +2,66 @@
   "meta": {
     "cases": 100,
     "parser": "original plot parseFacts (baseline)",
-    "date": "2026-09-05T07:13:06.317Z"
+    "date": "2026-09-05T09:07:46.379Z"
   },
   "overall": {
     "parties": {
-      "precision": 0.9956,
-      "recall": 0.987,
-      "f1": 0.9913
+      "precision": 1,
+      "recall": 0.9913,
+      "f1": 0.9956
     },
     "relStrict": {
-      "precision": 0.9071,
-      "recall": 0.9171,
-      "f1": 0.9121
+      "precision": 0.9459,
+      "recall": 0.9669,
+      "f1": 0.9563
     },
     "relDirless": {
-      "precision": 0.9126,
-      "recall": 0.9227,
-      "f1": 0.9176
+      "precision": 0.9568,
+      "recall": 0.9779,
+      "f1": 0.9672
     },
     "relPair": {
-      "precision": 0.9524,
-      "recall": 0.9677,
-      "f1": 0.96
+      "precision": 0.9841,
+      "recall": 1,
+      "f1": 0.992
     },
     "objects": {
-      "precision": 0.5732,
-      "recall": 0.7581,
-      "f1": 0.6528
+      "precision": 0.6076,
+      "recall": 0.7742,
+      "f1": 0.6809
     }
   },
   "dateAccuracy": {
-    "hit": 150,
+    "hit": 161,
     "total": 171,
-    "rate": 0.8772
+    "rate": 0.9415
   },
   "byDomain": {
     "civil": {
       "parties": {
-        "precision": 0.9906,
-        "recall": 0.9906,
-        "f1": 0.9906
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
       },
       "relStrict": {
-        "precision": 0.9091,
-        "recall": 0.9474,
-        "f1": 0.9278
+        "precision": 0.9485,
+        "recall": 0.9684,
+        "f1": 0.9583
       },
       "relDirless": {
-        "precision": 0.9192,
-        "recall": 0.9579,
-        "f1": 0.9381
+        "precision": 0.9691,
+        "recall": 0.9895,
+        "f1": 0.9792
       },
       "relPair": {
-        "precision": 0.9206,
-        "recall": 0.9831,
-        "f1": 0.9508
+        "precision": 0.9672,
+        "recall": 1,
+        "f1": 0.9833
       },
       "objects": {
-        "precision": 0.7317,
+        "precision": 0.7895,
         "recall": 0.9677,
-        "f1": 0.8333
+        "f1": 0.8696
       }
     },
     "commercial": {
@@ -71,24 +71,24 @@
         "f1": 0.9808
       },
       "relStrict": {
-        "precision": 0.9268,
-        "recall": 0.9268,
-        "f1": 0.9268
+        "precision": 0.9111,
+        "recall": 1,
+        "f1": 0.9535
       },
       "relDirless": {
-        "precision": 0.9268,
-        "recall": 0.9268,
-        "f1": 0.9268
+        "precision": 0.9111,
+        "recall": 1,
+        "f1": 0.9535
       },
       "relPair": {
         "precision": 1,
-        "recall": 0.9655,
-        "f1": 0.9825
+        "recall": 1,
+        "f1": 1
       },
       "objects": {
-        "precision": 0.4783,
-        "recall": 0.5789,
-        "f1": 0.5238
+        "precision": 0.5455,
+        "recall": 0.6316,
+        "f1": 0.5854
       }
     },
     "criminal": {
@@ -98,24 +98,24 @@
         "f1": 1
       },
       "relStrict": {
-        "precision": 0.84,
-        "recall": 0.7778,
-        "f1": 0.8077
+        "precision": 0.9615,
+        "recall": 0.9259,
+        "f1": 0.9434
       },
       "relDirless": {
-        "precision": 0.84,
-        "recall": 0.7778,
-        "f1": 0.8077
+        "precision": 0.9615,
+        "recall": 0.9259,
+        "f1": 0.9434
       },
       "relPair": {
-        "precision": 0.95,
-        "recall": 0.9048,
-        "f1": 0.9268
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
       },
       "objects": {
-        "precision": 0.1818,
+        "precision": 0.1667,
         "recall": 0.4,
-        "f1": 0.25
+        "f1": 0.2353
       }
     },
     "procedural": {
@@ -125,14 +125,14 @@
         "f1": 1
       },
       "relStrict": {
-        "precision": 0.9444,
+        "precision": 1,
         "recall": 0.9444,
-        "f1": 0.9444
+        "f1": 0.9714
       },
       "relDirless": {
-        "precision": 0.9444,
+        "precision": 1,
         "recall": 0.9444,
-        "f1": 0.9444
+        "f1": 0.9714
       },
       "relPair": {
         "precision": 1,
@@ -150,82 +150,82 @@
     "basic": {
       "parties": {
         "precision": 1,
-        "recall": 1,
-        "f1": 1
+        "recall": 0.9863,
+        "f1": 0.9931
       },
       "relStrict": {
-        "precision": 0.9773,
-        "recall": 0.9556,
-        "f1": 0.9663
+        "precision": 0.9783,
+        "recall": 1,
+        "f1": 0.989
       },
       "relDirless": {
-        "precision": 0.9773,
-        "recall": 0.9556,
-        "f1": 0.9663
+        "precision": 0.9783,
+        "recall": 1,
+        "f1": 0.989
       },
       "relPair": {
         "precision": 1,
-        "recall": 0.973,
-        "f1": 0.9863
+        "recall": 1,
+        "f1": 1
       },
       "objects": {
-        "precision": 0.5714,
+        "precision": 0.6,
         "recall": 0.6667,
-        "f1": 0.6154
+        "f1": 0.6316
       }
     },
     "medium": {
       "parties": {
         "precision": 1,
-        "recall": 0.9915,
-        "f1": 0.9957
+        "recall": 1,
+        "f1": 1
       },
       "relStrict": {
-        "precision": 0.8922,
-        "recall": 0.9381,
-        "f1": 0.9146
+        "precision": 0.95,
+        "recall": 0.9794,
+        "f1": 0.9645
       },
       "relDirless": {
-        "precision": 0.8922,
-        "recall": 0.9381,
-        "f1": 0.9146
+        "precision": 0.95,
+        "recall": 0.9794,
+        "f1": 0.9645
       },
       "relPair": {
-        "precision": 0.9412,
-        "recall": 0.9846,
-        "f1": 0.9624
+        "precision": 0.9701,
+        "recall": 1,
+        "f1": 0.9848
       },
       "objects": {
-        "precision": 0.625,
+        "precision": 0.641,
         "recall": 0.8065,
-        "f1": 0.7042
+        "f1": 0.7143
       }
     },
     "hard": {
       "parties": {
-        "precision": 0.9744,
-        "recall": 0.95,
-        "f1": 0.962
+        "precision": 1,
+        "recall": 0.975,
+        "f1": 0.9873
       },
       "relStrict": {
-        "precision": 0.8649,
-        "recall": 0.8205,
-        "f1": 0.8421
+        "precision": 0.8974,
+        "recall": 0.8974,
+        "f1": 0.8974
       },
       "relDirless": {
-        "precision": 0.8919,
-        "recall": 0.8462,
-        "f1": 0.8684
+        "precision": 0.9487,
+        "recall": 0.9487,
+        "f1": 0.9487
       },
       "relPair": {
-        "precision": 0.9091,
-        "recall": 0.9091,
-        "f1": 0.9091
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
       },
       "objects": {
-        "precision": 0.4762,
-        "recall": 0.7692,
-        "f1": 0.5882
+        "precision": 0.55,
+        "recall": 0.8462,
+        "f1": 0.6667
       }
     }
   },
@@ -280,13 +280,9 @@
       "domain": "civil",
       "difficulty": "medium",
       "partiesF1": 1,
-      "strictF1": 0.75,
-      "missedGold": [
-        "丙|丁|전매"
-      ],
-      "extraPred": [
-        "丙|丁|매도"
-      ]
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
     },
     {
       "id": "civil-007",
@@ -358,11 +354,15 @@
       "domain": "civil",
       "difficulty": "hard",
       "partiesF1": 1,
-      "strictF1": 0.8,
+      "strictF1": 0.3333,
       "missedGold": [
-        "을|갑|청구·제소"
+        "갑|을|위임",
+        "을|갑|유치권"
       ],
-      "extraPred": []
+      "extraPred": [
+        "갑|을|도급",
+        "갑|을|유치권"
+      ]
     },
     {
       "id": "civil-015",
@@ -470,24 +470,18 @@
       "domain": "civil",
       "difficulty": "medium",
       "partiesF1": 1,
-      "strictF1": 0.8,
+      "strictF1": 1,
       "missedGold": [],
-      "extraPred": [
-        "갑|병|상속"
-      ]
+      "extraPred": []
     },
     {
       "id": "civil-027",
       "domain": "civil",
       "difficulty": "hard",
       "partiesF1": 1,
-      "strictF1": 0.5,
-      "missedGold": [
-        "갑|을|계약"
-      ],
-      "extraPred": [
-        "갑|을|매도"
-      ]
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
     },
     {
       "id": "civil-028",
@@ -503,11 +497,9 @@
       "domain": "civil",
       "difficulty": "medium",
       "partiesF1": 1,
-      "strictF1": 0.8,
+      "strictF1": 1,
       "missedGold": [],
-      "extraPred": [
-        "갑|을|점유"
-      ]
+      "extraPred": []
     },
     {
       "id": "civil-030",
@@ -532,17 +524,17 @@
       "domain": "commercial",
       "difficulty": "medium",
       "partiesF1": 1,
-      "strictF1": 0.6667,
-      "missedGold": [
-        "갑|을|약속어음 발행"
-      ],
-      "extraPred": []
+      "strictF1": 0.8,
+      "missedGold": [],
+      "extraPred": [
+        "을|병|배서양도"
+      ]
     },
     {
       "id": "com-003",
       "domain": "commercial",
       "difficulty": "basic",
-      "partiesF1": 1,
+      "partiesF1": 0.8,
       "strictF1": 1,
       "missedGold": [],
       "extraPred": []
@@ -573,7 +565,7 @@
       "strictF1": 0.6667,
       "missedGold": [],
       "extraPred": [
-        "E주식회사|갑|대리"
+        "갑|E주식회사|배임"
       ]
     },
     {
@@ -635,14 +627,9 @@
       "domain": "criminal",
       "difficulty": "basic",
       "partiesF1": 1,
-      "strictF1": 0,
-      "missedGold": [
-        "병|을|강박",
-        "병|갑|강취"
-      ],
-      "extraPred": [
-        "병|을|강취"
-      ]
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
     },
     {
       "id": "cri-004",
@@ -658,10 +645,8 @@
       "domain": "criminal",
       "difficulty": "medium",
       "partiesF1": 1,
-      "strictF1": 0.8,
-      "missedGold": [
-        "을|갑|배임"
-      ],
+      "strictF1": 1,
+      "missedGold": [],
       "extraPred": []
     },
     {
@@ -851,9 +836,13 @@
       "domain": "civil",
       "difficulty": "hard",
       "partiesF1": 1,
-      "strictF1": 1,
-      "missedGold": [],
-      "extraPred": []
+      "strictF1": 0.5,
+      "missedGold": [
+        "갑|을건설|도급"
+      ],
+      "extraPred": [
+        "을건설|갑|도급"
+      ]
     },
     {
       "id": "h-c07",
@@ -877,16 +866,10 @@
       "id": "h-c09",
       "domain": "civil",
       "difficulty": "hard",
-      "partiesF1": 0.6667,
-      "strictF1": 0.5,
-      "missedGold": [
-        "을|갑|전세권 설정",
-        "채권자|갑|압류·집행"
-      ],
-      "extraPred": [
-        "갑|을|전세권 설정",
-        "갑의 채권자|갑|압류·집행"
-      ]
+      "partiesF1": 1,
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
     },
     {
       "id": "h-c10",
@@ -910,7 +893,7 @@
       "id": "h-c12",
       "domain": "commercial",
       "difficulty": "medium",
-      "partiesF1": 0.8,
+      "partiesF1": 1,
       "strictF1": 1,
       "missedGold": [],
       "extraPred": []
@@ -920,9 +903,11 @@
       "domain": "commercial",
       "difficulty": "basic",
       "partiesF1": 1,
-      "strictF1": 1,
+      "strictF1": 0.6667,
       "missedGold": [],
-      "extraPred": []
+      "extraPred": [
+        "갑|D주식회사|배임"
+      ]
     },
     {
       "id": "h-c14",
@@ -976,24 +961,18 @@
       "domain": "criminal",
       "difficulty": "medium",
       "partiesF1": 1,
-      "strictF1": 0.6667,
+      "strictF1": 1,
       "missedGold": [],
-      "extraPred": [
-        "피해자|피고인|지급"
-      ]
+      "extraPred": []
     },
     {
       "id": "h-c20",
       "domain": "criminal",
       "difficulty": "hard",
       "partiesF1": 1,
-      "strictF1": 0.5,
-      "missedGold": [
-        "병|을|장물취득"
-      ],
-      "extraPred": [
-        "병|갑|장물취득"
-      ]
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
     },
     {
       "id": "h-c21",
@@ -1042,11 +1021,9 @@
       "domain": "procedural",
       "difficulty": "medium",
       "partiesF1": 1,
-      "strictF1": 0.8,
+      "strictF1": 1,
       "missedGold": [],
-      "extraPred": [
-        "갑|을|매도"
-      ]
+      "extraPred": []
     },
     {
       "id": "h-c26",
@@ -1125,34 +1102,26 @@
       "domain": "civil",
       "difficulty": "medium",
       "partiesF1": 1,
-      "strictF1": 0.8,
+      "strictF1": 1,
       "missedGold": [],
-      "extraPred": [
-        "원고|피고|지급"
-      ]
+      "extraPred": []
     },
     {
       "id": "h-k35",
       "domain": "commercial",
       "difficulty": "medium",
       "partiesF1": 1,
-      "strictF1": 0.5,
-      "missedGold": [
-        "원고|피고|계약"
-      ],
-      "extraPred": [
-        "피고|원고|매도"
-      ]
+      "strictF1": 1,
+      "missedGold": [],
+      "extraPred": []
     },
     {
       "id": "h-k36",
       "domain": "commercial",
       "difficulty": "hard",
       "partiesF1": 0.8,
-      "strictF1": 0.8,
-      "missedGold": [
-        "피고|원고|지급"
-      ],
+      "strictF1": 1,
+      "missedGold": [],
       "extraPred": []
     },
     {
