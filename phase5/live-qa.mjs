@@ -24,7 +24,7 @@ async function main() {
   const qa = await ev(`(() => {
     const t = document.body.innerText;
     const sections = ['법역별', 'AI 보조 경로', '실제 판결문 일반화', '측정 방법', '정직한 한계'];
-    const nums = ['96.9%', '95.6%', '30.1%', '68.2%', '87.8%', '90.9%', '64.7%', '59.5%'];
+    const nums = ['96.9%', '95.6%', '30.6%', '70.9%', '79.8%', '93.1%', '64.7%', '59.5%'];
     return {
       title: document.title,
       sections: Object.fromEntries(sections.map(s => [s, t.includes(s)])),
