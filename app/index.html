@@ -59,6 +59,14 @@ textarea:focus{outline:none;border-color:var(--ink);background:var(--solid)}
 .addrow i{color:var(--faint);font-style:normal;text-align:center}
 input.field,select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card);font-size:13.5px;font-family:inherit}
 .addrow2{display:grid;grid-template-columns:1fr 130px auto;gap:6px;margin-top:6px}
+.aiopt{display:flex;align-items:center;gap:10px;margin-top:8px;padding:12px 14px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
+.aiopt input[type=checkbox]{width:18px;height:18px;accent-color:var(--contract)}
+.aiopt label{font-size:13.5px;font-weight:650;flex:1;cursor:pointer}
+.aiopt small{display:block;font-size:11.5px;color:var(--sub);font-weight:500;margin-top:1px}
+.ai-cfg{margin-top:8px;padding:12px 14px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
+.ai-cfg .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px}
+.ai-cfg label{font-size:11.5px;color:var(--sub);font-weight:650;display:flex;flex-direction:column;gap:4px}
+.ai-privacy{display:block;margin-top:8px;font-size:11px;color:var(--faint);line-height:1.6}
 .note{margin-top:30px;text-align:center;font-size:11.5px;color:var(--faint)}
 .fut{opacity:.13}
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:99px;font-size:13px;font-weight:650;transition:.3s;z-index:50;max-width:90vw}
@@ -90,6 +98,19 @@ input.field,select{width:100%;padding:11px 12px;border:1px solid var(--line);bor
       <button class="btn primary" id="draw">관계도 그리기</button>
       <button class="btn ghost" id="sample">예시</button>
       <button class="btn ghost" id="clear">지우기</button>
+    </div>
+    <div class="aiopt">
+      <input type="checkbox" id="ai"><label for="ai">AI로 더 정확하게<small id="ai-hint">끄면 전부 브라우저 안에서만 처리돼요</small></label>
+      <button class="btn ghost" id="ai-cfg-btn" type="button">AI 설정</button>
+    </div>
+    <div class="ai-cfg" id="ai-cfg" hidden>
+      <div class="grid3">
+        <label>API 엔드포인트<input class="field" id="ai-base" placeholder="https://api.openai.com/v1"></label>
+        <label>모델<input class="field" id="ai-model" placeholder="gpt-4o-mini"></label>
+        <label>API 키<input class="field" id="ai-key" type="password" placeholder="sk-…"></label>
+      </div>
+      <button class="btn" id="ai-save" style="margin-top:8px">저장</button>
+      <small class="ai-privacy">AI를 켜면 지문이 위에 입력한 API 제공자로 <b>직접 전송</b>돼요. 별도 서버를 거치지 않고, Lawchart가 키를 저장하지도 않아요(키는 이 브라우저에만 보관). 실패하면 규칙 파서로 자동 폴백합니다.</small>
     </div>
   </div>
 

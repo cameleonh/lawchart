@@ -1,7 +1,8 @@
-// Lawchart 메인 — 입력 → 파서 → 레이아웃 → 렌더 (자체 구현)
+// Lawchart 메인 — 입력 → 파서(규칙/AI 옵트인) → 레이아웃 → 렌더 (자체 구현)
 import { parse } from './src/parser.js';
 import { layout } from './src/layout.js';
 import { Renderer, KIND_LABEL } from './src/render.js';
+import { parseWithAI } from './src/ai.js';
 
 const $ = id => document.getElementById(id);
 const svg = $('svg');
@@ -10,15 +11,48 @@ let G = null;
 
 const SAMPLE = '갑은 2019. 5. 1. 을에게 A주택을 보증금 2억원에 세를 주고 전세권을 설정해 주었다. 을은 2021. 3. 1. 그 주택에서 나가면서 갑에게 보증금의 반환을 청구하였다. 갑은 보증금을 반환하지 못하자 2021. 6. 1. 을의 자동차를 유치하고 있다.';
 
-function build(text) {
-  const data = parse(text);
-  if (!data.parties.length) { toast('당사자(갑·을·甲·A…)를 찾지 못했어요'); return false; }
+function buildFromData(data) {
+  if (!data || !data.parties.length) { toast('당사자(갑·을·甲·A…)를 찾지 못했어요'); return false; }
   G = layout(data);
   renderer.setGraph(G);
   $('result').hidden = false;
   $('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
   return true;
 }
+
+function build(text) {
+  return buildFromData(parse(text));
+}
+
+/* ── AI 옵트인(F9): BYOK — 키는 이 브라우저에만, 실패 시 규칙 파서 폴백 ── */
+const AI_CFG_KEY = 'lawchart-ai', AI_ON_KEY = 'lawchart-ai-on';
+const loadAiCfg = () => { try { return JSON.parse(localStorage.getItem(AI_CFG_KEY) || 'null'); } catch { return null; } };
+let aiCfg = loadAiCfg();
+
+function aiReady() { return !!(aiCfg && aiCfg.baseUrl && aiCfg.model && aiCfg.key); }
+function refreshAiHint() {
+  const on = $('ai').checked;
+  $('ai-hint').textContent = on
+    ? (aiReady() ? '켜짐 — 지문이 입력한 API 제공자로 직접 전송돼요(실패 시 규칙 파서)' : 'AI 설정(엔드포인트·모델·키)을 먼저 저장해 주세요')
+    : '끄면 전부 브라우저 안에서만 처리돼요';
+}
+
+$('ai').addEventListener('change', () => { try { localStorage.setItem(AI_ON_KEY, $('ai').checked ? '1' : ''); } catch {} refreshAiHint(); });
+$('ai-cfg-btn').onclick = () => { $('ai-cfg').hidden = !$('ai-cfg').hidden; };
+$('ai-save').onclick = () => {
+  aiCfg = {
+    baseUrl: $('ai-base').value.trim() || 'https://api.openai.com/v1',
+    model: $('ai-model').value.trim() || 'gpt-4o-mini',
+    key: $('ai-key').value.trim(),
+  };
+  try { localStorage.setItem(AI_CFG_KEY, JSON.stringify(aiCfg)); } catch {}
+  $('ai-cfg').hidden = true;
+  refreshAiHint();
+  toast(aiCfg.key ? 'AI 설정을 저장했어요' : '키가 비어 있어요 — 규칙 파서만 동작해요');
+};
+if (aiCfg) { $('ai-base').value = aiCfg.baseUrl || ''; $('ai-model').value = aiCfg.model || ''; $('ai-key').value = aiCfg.key || ''; }
+$('ai').checked = (() => { try { return localStorage.getItem(AI_ON_KEY) === '1' && aiReady(); } catch { return false; } })();
+refreshAiHint();
 
 renderer.hooks.onChange = ({ T, isFut }) => {
   // 범례
@@ -83,7 +117,21 @@ renderer.hooks.onEdgeClick = id => {
   renderer.setGraph(G);
 };
 
-$('draw').onclick = () => { const t = $('text').value.trim(); if (t) build(t); };
+$('draw').onclick = async () => {
+  const t = $('text').value.trim();
+  if (!t) return;
+  const btn = $('draw');
+  if ($('ai').checked && aiReady()) {
+    btn.disabled = true; btn.textContent = 'AI가 읽는 중…';
+    try {
+      const out = await parseWithAI(t, { baseUrl: aiCfg.baseUrl, apiKey: aiCfg.key, model: aiCfg.model });
+      if (out && out.relations.length) { toast('AI로 그렸어요'); buildFromData(out); return; }
+      toast('AI가 관계를 찾지 못했어요 · 규칙 파서로 그릴게요');
+    } catch { toast('AI 실패 · 규칙 파서로 그릴게요'); }
+    finally { btn.disabled = false; btn.textContent = '관계도 그리기'; }
+  }
+  build(t);
+};
 $('sample').onclick = () => { $('text').value = SAMPLE; $('count').textContent = SAMPLE.length + '자'; };
 $('clear').onclick = () => {
   $('text').value = ''; $('count').textContent = ''; $('result').hidden = true; G = null;

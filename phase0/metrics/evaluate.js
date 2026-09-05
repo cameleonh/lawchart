@@ -73,6 +73,26 @@ async function predictLawchart(c) {
   };
 }
 
+let aiMod = null;
+async function predictAI(c) {
+  if (!aiMod) {
+    aiMod = await import(require('url').pathToFileURL(path.join(__dirname, '..', '..', 'app', 'src', 'ai.js')).href);
+  }
+  const cfg = {
+    baseUrl: process.env.LAWCHART_AI_BASE || 'https://api.openai.com/v1',
+    apiKey: process.env.LAWCHART_AI_KEY || '',
+    model: process.env.LAWCHART_AI_MODEL || 'gpt-4o-mini',
+  };
+  const out = await aiMod.parseWithAI(c.text, cfg);
+  if (!out) throw new Error('AI 응답 없음(키/네트워크/계약 위반) — id=' + c.id);
+  return {
+    parties: out.parties || [],
+    relations: (out.relations || [])
+      .filter(r => r.from !== r.to)
+      .map(r => ({ from: r.from, to: r.to, base: baseLabel(r.label), date: r.date || null, obj: r.obj || objFromLabel(r.label) })),
+  };
+}
+
 function prf(TP, FP, FN) {
   const p = TP + FP ? TP / (TP + FP) : 0;
   const r = TP + FN ? TP / (TP + FN) : 0;
@@ -207,6 +227,16 @@ async function main() {
     const res = await evaluate(cases, predictLawchart);
     fs.writeFileSync(path.join(REPORT_DIR, `${suffix}_lawchart.json`), JSON.stringify(res, null, 2), 'utf8');
     runs.push(['Lawchart 파서 v1', res, `${suffix}_lawchart.json`]);
+  }
+  if (which === 'ai') {
+    if (!process.env.LAWCHART_AI_KEY) {
+      console.error('AI 측정에는 LAWCHART_AI_KEY 환경변수가 필요합니다 (선택: LAWCHART_AI_BASE, LAWCHART_AI_MODEL).\n예: set LAWCHART_AI_KEY=sk-... && node evaluate.js --parser ai --set all\n주의: 건당 1회 LLM 호출 — 비용 발생.');
+      process.exit(1);
+    }
+    console.error(`AI 측정 — ${process.env.LAWCHART_AI_MODEL || 'gpt-4o-mini'} @ ${process.env.LAWCHART_AI_BASE || 'https://api.openai.com/v1'} · ${cases.length}건 호출(비용 발생)`);
+    const res = await evaluate(cases, predictAI);
+    fs.writeFileSync(path.join(REPORT_DIR, `${suffix}_ai.json`), JSON.stringify(res, null, 2), 'utf8');
+    runs.push(['AI 경로(BYOK)', res, `${suffix}_ai.json`]);
   }
   for (const [name, res] of runs) printReport(name, res, verbose);
 }
