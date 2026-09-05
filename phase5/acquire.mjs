@@ -11,7 +11,7 @@ mkdirSync(RAW, { recursive: true });
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // 도메인별 검색어 (하급심 단순 사안 위주로 후보 확보)
-const QUERIES = ['명의신탁 약정', '소유권이전등기 경료', '대여금 약정 이자', '전세권 설정 등기', '매매 예약 완결'];
+const QUERIES = ['부동산 매매계약 잔금', '전세금 반환', '채권양도 통지', '근저당권 실행 경매', '증여 계약 소유권', '질권 설정 담보', '임차권 등기', '채무자 회생 대출', '소비대차 원금 이자', '공탁 변제 제공'];
 
 async function connect(urlFilter) {
   const targets = await (await fetch(`http://localhost:${PORT}/json`)).json();

@@ -93,18 +93,17 @@ td b{color:var(--indigo)}
   ` : ''}
 
   ${hasReal ? `
-  <h2>실제 판결문 일반화 검증 (10건 소표본)</h2>
+  <h2>실제 판결문 일반화 검증 (30건)</h2>
   <table>
     <tr><th>지표</th><th>규칙 파서</th><th>AI 경로(GLM-5)</th></tr>
     <tr><td>관계 F1(엄격)</td><td>${pct(realLaw.overall.relStrict.f1)}</td><td><b>${realAI ? pct(realAI.overall.relStrict.f1) : '—'}</b></td></tr>
     <tr><td>당사자 F1</td><td>${pct(realLaw.overall.parties.f1)}</td><td>${realAI ? pct(realAI.overall.parties.f1) : '—'}</td></tr>
   </table>
   <div class="note" style="margin-top:10px">
-    <b>일반화 갭:</b> 실제 판결문(law.go.kr, 사실관계 부분 verbatim 10건)에서는 합성 골드셋 대비 정확도가 크게 낮아지며,
+    <b>일반화 갭:</b> 실제 판결문(law.go.kr, 사실관계 부분 verbatim ${realLaw.meta.cases}건)에서는 합성 골드셋 대비 정확도가 크게 낮아지며,
     <b>개방 문체에서는 AI 경로가 규칙 파서를 크게 앞섭니다</b>${realAI && realAI.overall.relStrict.f1 > realLaw.overall.relStrict.f1 ? ` (${pct(realAI.overall.relStrict.f1)} vs ${pct(realLaw.overall.relStrict.f1)})` : ''}.
     이것이 두 경로를 함께 제공하는 이유입니다 — 짧고 통제된 지문(사례집·시험)에는 무료·즉시·오프라인 규칙 파서가,
     실제 판결문 같은 긴·개방 문체에는 AI 옵트인이 적합합니다.
-    소표본(10건)이므로 신뢰구간이 넓고, 세트 확대를 진행 중입니다.
   </div>
   ` : ''}
 
