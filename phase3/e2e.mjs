@@ -37,6 +37,9 @@ async function main() {
     edges: document.querySelectorAll('#svg .edge').length,
     arcs: document.querySelectorAll('#svg .arc').length,
     rows: document.querySelectorAll('#edges .er').length,
+    chips: document.querySelectorAll('#precedents a.pchip').length,
+    badHref: [...document.querySelectorAll('#precedents a.pchip')].filter(a => !a.href.startsWith('https://www.law.go.kr/precSc.do?')).length,
+    precShown: !document.getElementById('prec-wrap').hidden,
     resultShown: !document.getElementById('result').hidden,
     tlShown: !document.getElementById('tl-wrap').hidden,
     svgLen: document.getElementById('svg').innerHTML.length,
@@ -52,6 +55,7 @@ async function main() {
   await ev(`(() => { const orig = window.prompt; window.prompt = () => 'a0'; const b = document.querySelector('#edges [data-memo]'); const ok = !!b; if (b) b.click(); window.prompt = orig; return ok ? 1 : 0; })()`);
   await sleep(300);
   const memo = await ev(`((document.querySelector('#edges .memo')||{}).textContent || '') + ' |칩=' + (document.getElementById('svg').innerHTML.includes('\\u2691') ? 'Y' : 'N')`);
+  const memoChip = await ev(`document.querySelectorAll('#precedents a.pchip.memo').length`);
 
   // 4) 자동저장 스냅샷
   await sleep(900);
@@ -69,9 +73,10 @@ async function main() {
     return before !== null ? 'dispatched' : 'no-transform';
   })()`);
 
-  console.log(JSON.stringify({ stats, futAtFirst, memo, saved, dragMoved, errors }, null, 1));
+  console.log(JSON.stringify({ stats, futAtFirst, memo, memoChip, saved, dragMoved, errors }, null, 1));
   const ok = stats.nodes >= 2 && stats.edges >= 2 && stats.rows >= 2 && stats.resultShown
-    && stats.svgLen > 500 && memo.includes('|칩=Y') && saved.startsWith('Y') && errors.length === 0;
+    && stats.svgLen > 500 && stats.chips >= 2 && stats.badHref === 0 && stats.precShown && memoChip >= 1
+    && memo.includes('|칩=Y') && saved.startsWith('Y') && errors.length === 0;
   console.log(ok ? 'E2E-PASS' : 'E2E-FAIL');
   ws.close();
   process.exit(ok ? 0 : 1);

@@ -342,7 +342,7 @@ export function parse(text) {
           if (!f || !t2 || f === t2) return;
           const key = `${f}|${t2}|${label}|${d || ''}`;
           if (relations.some(x => x._k === key)) return;
-          relations.push({ from: f, to: t2, label: fullLabel, kind: pat.kind, date: d, obj: thing || null, _k: key });
+          relations.push({ from: f, to: t2, label: fullLabel, type: label, kind: pat.kind, date: d, obj: thing || null, _k: key });
           if (thing) objectsSet.add(thing);
           sentPairs.set(f, t2); sentPairs.set(t2, f);
           globalPairs.push({ a: f, b: t2 });

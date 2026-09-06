@@ -3,6 +3,7 @@ import { parse } from './src/parser.js';
 import { layout } from './src/layout.js';
 import { Renderer, KIND_LABEL } from './src/render.js';
 import { parseWithAI } from './src/ai.js';
+import { precedentChips } from './src/precedent.js';
 
 const $ = id => document.getElementById(id);
 const svg = $('svg');
@@ -85,6 +86,13 @@ renderer.hooks.onChange = ({ T, isFut }) => {
   const opts = G.nodes.filter(n => n.type !== 'thing').map(n => `<option>${esc(n.id)}</option>`).join('');
   $('add-from').innerHTML = opts; $('add-to').innerHTML = opts;
   if (G.nodes.length > 1) $('add-to').selectedIndex = 1;
+
+  // 근접 판례 — 인식된 쟁점 유형·쟁점 메모를 국가법령정보센터 판례 검색으로
+  const chips = precedentChips(G.edges);
+  $('prec-wrap').hidden = !chips.length;
+  const chipHtml = chips.map(c =>
+    `<a class="pchip${c.memo ? ' memo' : ''}" href="${c.url}" target="_blank" rel="noopener">${c.memo ? '⚑ ' : ''}${esc(c.name)}${c.count > 1 ? ` <b>×${c.count}</b>` : ''}</a>`).join('');
+  if ($('precedents').innerHTML !== chipHtml) $('precedents').innerHTML = chipHtml;
 
   saveLocal();
 };

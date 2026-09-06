@@ -12,6 +12,7 @@
 - 캡처 이미지 OCR 입력 (Tesseract.js, 브라우저 내)
 - 관계도 편집기: 드래그·이름 수정·줌·팬, 관계 추가/수정/쟁점 메모 ⚑
 - 시점 슬라이더: 그 날짜에 유효한 소유·점유·담보 상태만 표시
+- **근접 판례 찾기**: 인식된 쟁점 유형·쟁점 메모 칩으로 국가법령정보센터 판례 검색 열기 (데이터 파이프라인 없음 — 검색 페이지로 직접 연결)
 - 저장: 브라우저 자동저장, 사건 파일(JSON) 내보내기/불러오기, PNG/SVG
 - **AI 보조(옵션, 자기 키 사용)**: "AI로 더 정확하게" 켜고 자신의 OpenAI 호환 API 키를 입력하면 LLM이 지문을 재분석합니다. 키와 지문은 입력한 API 제공자로만 직접 전송되고(별도 서버 없음), 실패 시 규칙 파서로 자동 폴백합니다. 기본은 꺼져 있고, 끄면 뭐든 전송되지 않습니다.
 
@@ -35,7 +36,7 @@ node phase0/metrics/publish.js   # app/accuracy.html 재생성
 
 ## 구조
 
-- `app/` — 제품 (index.html, main.js, src/{dict,parser,layout,render}.js)
+- `app/` — 제품 (index.html, main.js, src/{dict,parser,layout,render,ai,precedent}.js)
 - `phase0/` — 골드셋·측정 파이프라인·게이트 보고
 - `phase1~3/` — 화면 설계도·게이트 보고·배포 지침·E2E
 - `PRD_Lawchart_v0.3.md` — 제품 요구사항(결정 기록 D1~D5 포함)

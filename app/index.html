@@ -54,6 +54,12 @@ textarea:focus{outline:none;border-color:var(--ink);background:var(--solid)}
 .er .lab{flex:1;color:var(--sub);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .er .memo{flex-basis:100%;font-size:11.5px;color:var(--dispute);font-weight:650;padding-left:26px}
 .er{flex-wrap:wrap}
+.chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 0 6px}
+.pchip{display:inline-flex;align-items:center;gap:5px;padding:8px 13px;border-radius:999px;border:1px solid rgba(91,91,214,.28);background:rgba(91,91,214,.07);font-size:12.5px;font-weight:650;color:var(--contract);text-decoration:none;transition:.15s;white-space:nowrap}
+.pchip:hover{background:rgba(91,91,214,.15)}
+.pchip b{font-weight:700;font-size:11px;color:var(--sub)}
+.pchip.memo{border-color:rgba(224,36,36,.25);background:rgba(224,36,36,.06);color:var(--dispute)}
+.pchip.memo:hover{background:rgba(224,36,36,.13)}
 .k-dot{width:9px;height:9px;border-radius:50%;flex:none}
 .addrow{display:grid;grid-template-columns:1fr auto 1fr;gap:6px;align-items:center;margin-top:6px}
 .addrow i{color:var(--faint);font-style:normal;text-align:center}
@@ -135,6 +141,12 @@ input.field,select{width:100%;padding:11px 12px;border:1px solid var(--line);bor
     <div id="edges"></div>
     <div class="addrow"><select id="add-from"></select><i>→</i><select id="add-to"></select></div>
     <div class="addrow2"><input class="field" id="add-label" placeholder="관계 (예: 매도 (X토지))"><button class="btn" id="add-btn">추가</button></div>
+
+    <div id="prec-wrap" hidden>
+      <div class="label">근접 판례 찾기<span class="r">인식된 쟁점으로 국가법령정보센터 판례 검색을 열어요</span></div>
+      <div class="chips" id="precedents"></div>
+    </div>
+
     <div class="row" style="margin-top:14px">
       <button class="btn" id="add-party">+ 당사자</button>
       <button class="btn ghost" id="add-thing">+ 목적물</button>
