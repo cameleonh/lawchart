@@ -22,8 +22,8 @@ export const ACTION_PATTERNS = [
   { re: /명의 ?신탁/, label: '명의신탁', kind: 'contract', from: 'subj' },
   { re: /증여|무상으로 ?(주|양도)/, label: '증여', kind: 'contract', from: 'subj' },
   // ── 임대차 ────────────────────────────────────────────────
-  { re: /임대차 ?계약|임대하|임치 ?아니하고|세를 ?주|세 ?놓/, label: '임대', kind: 'contract', from: 'subj' },
-  { re: /임차(?!보증금)|세를 ?얻|빌려 ?살|전세(?!권)/, label: '임대', kind: 'contract', from: 'obj' },
+  { re: /임대차 ?계약|임대하|임치 ?아니하고|세를 ?주|세 ?놓|전세로$|전세(로)? ?빌려 ?주/, label: '임대', kind: 'contract', from: 'subj' },
+  { re: /임차(?!보증금)|세를 ?얻|빌려 ?살|전세로 ?(?:빌려 ?살|들어|들었|살았|살고|살아|얻었|얻아|거주)|전세(?!권|로)/, label: '임대', kind: 'contract', from: 'obj' },
   { re: /전대/, label: '전대', kind: 'contract', from: 'subj' },
   // ── 금전 ──────────────────────────────────────────────────
   { re: /빌려 ?주|대여하|대출하|금전을 ?대여|돈을 ?빌려 ?주/, label: '금전대여', kind: 'money', from: 'subj' },
